@@ -1,374 +1,384 @@
-
 # IT General Controls Audit Test Program
 
 **Project:** Northstar Services, Inc. — IT General Controls Audit  
 **Engagement ID:** NS-ITGC-2026-01  
-**Document ID:** ATP-NS-ITGC-001  
-**Document Status:** Draft — Pre-Execution  
-**Prepared By:** Simulated IT Audit Analyst  
+**Audit Period:** January 1–September 30, 2026  
+**Status:** Preliminary — sample testing documented; evidence validation and final conclusions pending  
 **Classification:** Synthetic portfolio simulation
 
 ## 1. Purpose
 
-This test program defines the procedures for evaluating the five in-scope IT general controls.
+This test program documents the planned procedures for evaluating five IT general control areas using fictional internal policies and synthetic evidence.
 
-It translates the fictional company's internal control policies into repeatable audit steps. The program must be finalized before the synthetic populations are tested.
+The program defines each control objective, population, planned sample, procedures, pass criteria, potential exceptions, and required documentation.
 
-The program does not contain completed test results. Results will be recorded in the individual workpapers after the evidence populations, sample selections, and relevant records have been established.
+Preliminary sample results are recorded in the individual workpapers. This program remains the planned testing baseline; it does not itself establish that a control operated effectively.
 
 ## 2. General Testing Requirements
 
-Before executing any test, the auditor must:
+For each selected item, the workpaper should document:
 
-1. Identify the relevant policy and control requirement.
-2. Identify the population source and audit period.
-3. Document the population size, relevant inclusion criteria, and completeness checks.
-4. Reconcile record counts and investigate unexplained gaps or duplicates.
-5. Define the sampling approach and document why it is appropriate for the test.
-6. Record selected item identifiers before evaluating their results.
-7. Identify the evidence required to complete each procedure.
-8. Apply the criteria consistently across the selected items.
-9. Document exceptions, contradictory evidence, and unresolved limitations.
-10. Reach a conclusion supported by the evidence and scope of the test.
+1. Sample identifier and source record.
+2. Control objective and applicable fictional policy criterion.
+3. Evidence inspected and its reference.
+4. Procedure performed.
+5. Expected result.
+6. Actual result.
+7. Classification and rationale.
+8. Limitation, unresolved question, or follow-up requirement.
+9. Conclusion supported by the evidence available.
 
-The planned initial samples are illustrative judgmental samples for this portfolio exercise. They are not statistical samples and do not, by themselves, support statistical projections to an entire population.
+### Result classifications
 
-Where a reliable, complete dataset is available, full-population analysis may be used to identify potential exceptions. Data completeness and accuracy must be evaluated before relying on automated results.
+- **Pass:** Available evidence supports that the selected item met the applicable criterion.
+- **Exception:** Available evidence supports that the selected item did not meet the applicable criterion.
+- **Unable to Conclude:** Evidence is insufficient to determine whether the criterion was met.
+- **Not Applicable:** The criterion does not apply to the selected item, with the reason documented.
+
+The classification must be based on the applicable criteria and the evidence available. Missing evidence should not automatically be treated as proof that the activity did not occur.
+
+The samples are judgmental, not statistical. Results must not be projected statistically to the full populations.
 
 ## 3. WP-001 — User Provisioning and Access Authorization
 
-**Control ID:** AC-01  
-**Risk ID:** R-01  
-**Primary Criteria:** Internal IT Control Policies, Section 3
-
 ### Objective
 
-Determine whether selected access-provisioning transactions were approved by the appropriate authority before access was granted and whether the granted access matched the approval.
+Determine whether selected user provisioning requests are appropriately authorized and the role granted agrees with the approved request.
 
 ### Population
 
-All in-scope user provisioning transactions completed during January 1 through September 30, 2026.
+The Provisioning tab contains 15 records.
 
 ### Planned Sample
 
-Select an initial judgmental sample of 10 provisioning transactions, subject to population availability and documented risk considerations.
-
-The sample should include a mix of applications and access roles. Where the population is smaller than the planned sample, document the population and test all available items.
+10 records: PR-001 through PR-010.
 
 ### Procedures
 
-1. Obtain the provisioning population and document its source, period, and record count.
-2. Reconcile the population against the available source listing and investigate unexplained gaps or duplicates.
-3. Document the sampling method and record the selected transaction IDs.
-4. For each selected transaction, obtain the request, approval, and provisioning evidence.
-5. Verify that the request identifies the user, application, role, and business justification.
-6. Verify that the approver was authorized under the fictional policy.
-7. Compare the approval timestamp with the provisioning timestamp.
-8. Compare the approved role with the actual assigned role.
-9. Record missing, inconsistent, or contradictory evidence.
-10. Determine whether each selected transaction meets the policy criteria.
-11. Summarize the exceptions and conclude on the results of the test.
+For each selected record:
+
+1. Inspect the provisioning request and identify the requested user and role.
+2. Identify the required approval evidence under the fictional policy.
+3. Compare the approval information with the request.
+4. Compare the requested role with the supplied Access Listing.
+5. Determine whether the available evidence supports that the access was authorized and assigned as requested.
+6. Record missing evidence, inconsistencies, and unresolved questions.
 
 ### Pass Criteria
 
-The selected transaction has the required request information, valid prior approval, and evidence that the assigned access matches the approved request.
+The selected item is supported by sufficient available evidence that the access request was appropriately approved and the assigned role agrees with the authorized request.
 
 ### Potential Exceptions
 
-- Approval missing or not attributable to an authorized approver.
-- Approval occurs after provisioning.
-- Actual access exceeds or differs from the approved role.
-- Evidence cannot reliably link the request to the provisioned account.
+- No approval evidence is located.
+- Approval cannot be linked to the selected request.
+- The assigned role differs from the approved role.
+- Available records conflict or are insufficient to determine what access was authorized.
 
 ### Required Evidence
 
-Access request, approval record, assigned-role listing, provisioning timestamp, and relevant ticket history.
+Provisioning record, approval reference or evidence, access listing entry, role information, and relevant supporting documentation.
+
+### Preliminary Workpaper Status
+
+WP-001 documents individual results for the 10 planned sample items. PR-007 has a requested role of `Lead`, while the access listing shows `Operations Admin`. PR-010 lacks an approval record in the current evidence package.
+
+These observations remain subject to follow-up and evidence validation. The supplied Access Listing has not been independently reconciled to a complete source-system export.
 
 ### Workpaper Conclusion
 
-Document the number of items tested, the number meeting criteria, the number with exceptions, unresolved evidence limitations, and the basis for the conclusion.
+The workpaper records preliminary sample results and follow-up requirements. Final conclusions remain pending evidence validation.
 
 ## 4. WP-002 — Terminated-User Access Removal
 
-**Control ID:** AC-02  
-**Risk ID:** R-02  
-**Primary Criteria:** Internal IT Control Policies, Section 4
-
 ### Objective
 
-Determine whether selected terminated-user accounts were disabled within the applicable policy deadline.
+Determine whether access for selected terminated users was disabled within the fictional policy timeframe and whether the records support the timing and status conclusion.
 
 ### Population
 
-All employee terminations within the audit period for which applicable user accounts should have been disabled.
+The Terminations tab contains 12 records.
 
 ### Planned Sample
 
-Select an initial judgmental sample of 10 terminations. Include different termination categories where available, including standard and coordinated involuntary terminations.
-
-If fewer than 10 eligible records exist, document the population and test all available items.
+10 records: TR-001 through TR-010.
 
 ### Procedures
 
-1. Obtain the termination population and document its source, period, and record count.
-2. Confirm the population includes the relevant termination categories.
-3. Reconcile the termination records to the available source listing and investigate unexplained gaps or duplicates.
-4. Document the sampling method and selected employee and account identifiers.
-5. Obtain the termination record and IT notification evidence for each selected item.
-6. Identify the applicable termination category and policy requirement.
-7. Obtain the relevant account record or system event showing actual disablement.
-8. For standard terminations, calculate the deadline as the IT notification timestamp plus four hours.
-9. For coordinated involuntary terminations, verify the agreed effective removal time and applicable evidence.
-10. Compare actual disablement with the applicable deadline.
-11. Determine whether any delay was documented, escalated, or otherwise addressed.
-12. Record exceptions and evidence limitations.
-13. Summarize the results and conclude on the test.
+For each selected record:
+
+1. Inspect the termination notification and relevant employee or account identifier.
+2. Identify the applicable timestamp that starts the fictional policy timeframe.
+3. Inspect the disablement timestamp and account status.
+4. Calculate the elapsed time using the recorded timestamps where possible.
+5. Compare the result with the fictional four-hour requirement.
+6. Investigate inconsistencies between notification, agreed effective-removal time, and disablement.
+7. If a required timestamp or account status is missing, determine whether alternative reliable evidence is available.
+8. Record the result and any limitation.
 
 ### Pass Criteria
 
-The account was disabled by the deadline applicable to its termination category, supported by reliable timestamps and account evidence.
+Available evidence supports that access was disabled within the applicable fictional policy timeframe and that the relevant timestamps and account status are sufficiently supported.
 
 ### Potential Exceptions
 
-- Account disabled after the applicable deadline.
-- Relevant account cannot be identified or reconciled.
-- Required timestamp is missing or unreliable.
-- Termination category or coordinated effective time cannot be established.
-- Required exception escalation is not evidenced.
+- The recorded removal interval exceeds the policy timeframe.
+- Disablement occurs after the agreed effective-removal time.
+- The disablement timestamp is missing.
+- The account status is unknown or cannot be substantiated.
+- Timestamp inconsistencies prevent a reliable conclusion.
 
 ### Required Evidence
 
-Termination record, HR effective timestamp, IT notification timestamp, account inventory, actual disablement evidence, and relevant escalation records.
+Termination record, notification timestamp, agreed effective-removal timestamp where applicable, disablement timestamp, account status, and supporting identity-provider or application records if available.
+
+### Preliminary Workpaper Status
+
+WP-002 documents individual results for the 10 planned sample items.
+
+Preliminary observations include:
+
+- TR-003 has a recorded notification-to-disablement interval of 4 hours and 40 minutes.
+- TR-005 records disablement two minutes after the agreed effective-removal time.
+- TR-006 lacks a disablement timestamp and has an `UNKNOWN` account status.
+- TR-008 has a recorded notification-to-disablement interval of 4 hours and 50 minutes.
+
+These observations require validation against reliable supporting evidence and the applicable policy criteria.
 
 ### Workpaper Conclusion
 
-Document each tested account's applicable deadline, actual disablement time, result, and the evidence supporting the conclusion.
-
-A timing exception does not, by itself, establish that unauthorized activity occurred.
+The workpaper records preliminary sample results and follow-up requirements. Final conclusions remain pending validation of timestamps, account status, and relevant source evidence.
 
 ## 5. WP-003 — Privileged Access Management
 
-**Control ID:** AC-03  
-**Risk ID:** R-03  
-**Primary Criteria:** Internal IT Control Policies, Section 5
-
 ### Objective
 
-Determine whether selected privileged-access assignments were appropriately authorized, justified, and supported by required review evidence.
+Determine whether selected privileged-access assignments have the required approvals and supporting documentation under the fictional policy.
 
 ### Population
 
-All in-scope privileged-access assignments active during the audit period, together with the relevant assignment and approval records.
+The Privileged Access tab contains 10 records.
 
 ### Planned Sample
 
-Select an initial judgmental sample of 10 privileged-access assignments, or test all available assignments if fewer exist.
-
-Prioritize coverage across relevant applications, privileged roles, and assignment circumstances.
+10 records: PA-001 through PA-010.
 
 ### Procedures
 
-1. Obtain the privileged-access inventory and document its source, period, and record count.
-2. Determine whether the inventory includes the relevant privileged roles and accounts.
-3. Reconcile the inventory to available source records and investigate unexplained gaps or duplicates.
-4. Document the sampling method and selected account identifiers.
-5. Obtain each selected assignment's request, justification, and approval evidence.
-6. Verify approval by both the application owner and IT Security Owner.
-7. Compare approval timestamps with the assignment timestamp.
-8. Compare the approved role with the role actually assigned.
-9. Evaluate whether the documented business need supports the privileged role.
-10. Inspect applicable quarterly access-review evidence.
-11. Where access was identified for removal, inspect the related action and available completion evidence.
-12. Document exceptions and limitations.
-13. Summarize the results and conclude on the test.
+For each selected record:
+
+1. Identify the user, application, privileged role, and assignment details.
+2. Inspect the business justification and assignment record.
+3. Identify the required Application Owner approval.
+4. Identify the required IT Security Owner approval.
+5. Compare approval timestamps with the assignment timestamp where available.
+6. Reconcile approval references to the Privileged Approvals tab.
+7. Inspect available periodic-review evidence where applicable.
+8. Record missing approvals, mismatches, or unresolved questions.
 
 ### Pass Criteria
 
-The selected assignment has the required prior approvals, documented business justification, matching role assignment, and applicable review evidence.
+Available evidence supports that the assignment was justified and the required Application Owner and IT Security Owner approvals were obtained in accordance with the fictional policy.
 
 ### Potential Exceptions
 
-- One or both required approvals are absent.
-- Approval occurred after assignment.
-- Assigned privileges exceed the approved role.
-- Business justification is missing or insufficient under the policy.
-- Required quarterly review evidence is absent.
-- Identified access-removal actions lack evidence of completion.
+- A required approver's evidence is not located.
+- Approval references do not match the assignment.
+- Approval timing does not meet the fictional policy.
+- Required review evidence is incomplete or unavailable.
+- Conflicting records prevent a reliable conclusion.
 
 ### Required Evidence
 
-Privileged-access inventory, request, approvals, assignment timestamps, role details, quarterly review records, and related corrective-action evidence.
+Privileged assignment record, business justification, Application Owner approval, IT Security Owner approval, assignment timestamp, approval references, and supporting review evidence.
+
+### Preliminary Workpaper Status
+
+WP-003 documents individual results for the 10 planned sample items.
+
+PA-004 has Application Owner approval evidence, but the required IT Security Owner approval reference was not located in the current evidence package. The absence of that reference requires follow-up; it should not be represented as proof that no approval could have occurred elsewhere.
 
 ### Workpaper Conclusion
 
-Document results separately for authorization, role alignment, business justification, and review requirements. Explain how each exception affects the overall conclusion.
+The workpaper records preliminary sample results and follow-up requirements. Final conclusions remain pending validation of the approval evidence and related records.
 
 ## 6. WP-004 — Periodic User Access Reviews
 
-**Control ID:** AC-04  
-**Risk ID:** R-04  
-**Primary Criteria:** Internal IT Control Policies, Section 6
-
 ### Objective
 
-Determine whether selected quarterly access reviews were completed on time, covered the required population, and documented appropriate follow-up.
+Determine whether selected periodic access reviews were completed by the applicable deadline, adequately documented, and followed up where issues were identified.
 
 ### Population
 
-All required quarterly access reviews for in-scope applications during the audit period, including the associated access listings and corrective-action records.
+The Access Reviews tab contains 12 records.
 
 ### Planned Sample
 
-Select an initial judgmental sample of 6 review instances, subject to availability. Include different quarters and applications where possible.
+6 records: AR-001, AR-003, AR-004, AR-005, AR-006, and AR-008.
 
-If fewer than 6 eligible review instances exist, document the available population and test all available items.
+AR-007 is not part of the six-item sample and must remain a separate population observation.
 
 ### Procedures
 
-1. Obtain the inventory of required review instances and document its source and record count.
-2. Determine which applications and quarters should be represented.
-3. Reconcile the review inventory to the available application and review listings.
-4. Document the sampling method and selected review identifiers.
-5. Obtain the access listing associated with each selected review.
-6. Verify that the review identifies the application, review period, reviewer, and completion date.
-7. Verify that the reviewer was the appropriate application owner or authorized reviewer.
-8. Compare the completion date with the deadline of 15 calendar days after quarter-end.
-9. Assess whether the evidence supports coverage of the required population.
-10. Inspect documented review decisions and identified access issues.
-11. Trace selected identified issues to corrective-action records and completion evidence.
-12. Document exceptions, missing evidence, and unresolved questions.
-13. Summarize the results and conclude on the test.
+For each selected record:
+
+1. Identify the application and review period.
+2. Inspect the applicable fictional policy deadline.
+3. Inspect the recorded completion date and reviewer information.
+4. Determine whether evidence supports that the required review occurred.
+5. Evaluate whether the review covered the intended population based on the evidence supplied.
+6. Inspect identified issues and associated follow-up records.
+7. Determine whether the follow-up item was completed and whether completion evidence is available.
+8. Record the result, limitation, and any additional evidence needed.
 
 ### Pass Criteria
 
-The selected review was completed by the appropriate reviewer within the required period, covered the required population, documented review decisions, and recorded appropriate follow-up.
+Available evidence supports that the required review was completed by the applicable deadline, adequately documented, and followed up where required.
 
 ### Potential Exceptions
 
-- Required review was not completed.
-- Review was completed after the policy deadline.
-- Reviewer authorization is not established.
-- Population coverage cannot be demonstrated.
-- Review evidence does not support meaningful examination of access.
-- Identified issues lack evidence of appropriate follow-up.
+- The review was completed after the applicable deadline.
+- Required reviewer or completion evidence is missing.
+- Coverage cannot be established from the available evidence.
+- Identified issues lack documented follow-up.
+- A remediation item is marked complete without supporting evidence.
 
 ### Required Evidence
 
-Required-review inventory, access listings, review sign-offs, review decisions, exception tickets, and corrective-action completion records.
+Review record, applicable deadline, completion date, reviewer evidence, underlying review listing or support where available, identified issues, and follow-up records.
+
+### Preliminary Workpaper Status
+
+WP-004 documents individual results for the six planned sample items.
+
+AR-003, AR-004, AR-006, and AR-008 are recorded as late. Completion evidence for follow-up item REM-002 has not been located in the current evidence package.
+
+AR-007 remains a separate population observation because it is outside the selected sample.
+
+The fictional policy sets the Q3 review deadline at October 15, 2026. Because the audit cutoff is September 30, 2026, Q3 reviews must not be classified as overdue at the cutoff solely because the deadline had not yet passed.
 
 ### Workpaper Conclusion
 
-Document timeliness, reviewer authorization, population coverage, and follow-up as distinct test attributes. Explain any limitation that prevents a reliable conclusion.
+The workpaper records preliminary sample results and follow-up requirements. Final conclusions remain pending validation of the review evidence and related follow-up documentation.
 
 ## 7. WP-005 — IT Change Management
 
-**Control ID:** CM-01  
-**Risk ID:** R-05  
-**Primary Criteria:** Internal IT Control Policies, Section 7
-
 ### Objective
 
-Determine whether selected technology changes were documented, appropriately authorized, tested as required, and implemented in accordance with policy.
+Determine whether selected IT changes were appropriately authorized, tested, and reviewed in accordance with the fictional change-management policy.
 
 ### Population
 
-All in-scope technology change tickets implemented during the audit period, including standard and emergency changes.
+The Change Tickets tab contains 12 records.
 
 ### Planned Sample
 
-Select an initial judgmental sample of 10 changes, including standard and emergency changes where available.
-
-The sample should cover different systems and change types. If the population contains fewer than 10 eligible changes, document the population and test all available items.
+10 records: CH-001 through CH-010.
 
 ### Procedures
 
-1. Obtain the change population and document its source, period, and record count.
-2. Reconcile the population against available change records and investigate unexplained gaps or duplicates.
-3. Identify standard and emergency changes within the population.
-4. Document the sampling method and selected change IDs.
-5. Obtain the change ticket and supporting records for each selected item.
-6. Verify that the ticket existed before implementation.
-7. Verify that the ticket documents the change purpose, affected system, and relevant impact.
-8. Compare the approval timestamp with the implementation timestamp.
-9. Inspect the documented testing evidence and determine whether it satisfies the applicable policy requirements.
-10. Verify that the approver and implementer are identified.
-11. Evaluate whether the same person acted as the sole approver and implementer.
-12. For emergency changes, inspect the emergency justification and authorization.
-13. For emergency changes, verify that retrospective review was completed within one business day after implementation.
-14. Inspect failure, rollback, or significant deviation records where applicable.
-15. Document exceptions and evidence limitations.
-16. Summarize the results and conclude on the test.
+For each selected record:
+
+1. Inspect the change ticket and identify the change purpose and type.
+2. Determine whether the change was classified as standard, normal, or emergency under the fictional policy.
+3. Inspect the approval record and approval timestamp.
+4. Compare approval timing with implementation timing.
+5. Inspect testing evidence and the recorded test result.
+6. Compare approver and implementer identities where the policy requires separation.
+7. For emergency changes, inspect retrospective-review evidence and timestamp.
+8. Determine whether the available evidence supports compliance with the applicable policy requirement.
+9. Record missing fields, timing questions, exceptions, and follow-up requirements.
 
 ### Pass Criteria
 
-The selected change meets the applicable standard or emergency-change requirements, including required documentation, authorization, testing, implementation evidence, and retrospective review where applicable.
+Available evidence supports that the change was appropriately authorized, tested, and implemented in accordance with the fictional policy. Where applicable, approver/implementer separation and emergency retrospective-review requirements are also supported.
 
 ### Potential Exceptions
 
-- No change ticket exists before implementation.
-- Required authorization occurred after implementation without an applicable emergency process.
-- Required testing evidence is absent or insufficient.
-- Approver or implementer cannot be identified.
-- Required separation of approval and implementation responsibilities is not demonstrated.
-- Emergency justification or retrospective review is missing.
-- Retrospective review occurred after the policy deadline.
+- Required approval is missing.
+- Approval occurred after implementation when prior approval was required.
+- Required testing evidence is absent or does not support a pass.
+- The approver and implementer are the same person when independent approval is required.
+- Emergency retrospective-review evidence is missing.
+- Timing cannot be assessed because a required timestamp or policy interpretation is unavailable.
 
 ### Required Evidence
 
-Change ticket, approval record, testing evidence, implementation record, implementer identity, emergency documentation, and rollback or failure records where applicable.
+Change ticket, change classification, approval evidence and timestamp, implementation timestamp, testing record, approver and implementer identifiers, retrospective-review evidence where applicable, and the relevant fictional policy.
+
+### Preliminary Workpaper Status
+
+WP-005 documents individual results for the 10 planned sample items.
+
+Preliminary observations include:
+
+- CH-004 has the same approver and implementer ID.
+- CH-005 lacks an approval timestamp.
+- CH-006 lacks a retrospective-review timestamp in the current evidence package.
+- CH-010 records implementation on July 3, 2026 at 1:20 AM and retrospective review on July 6, 2026 at 10:00 AM.
+
+CH-006 and CH-010 require separate assessments. For CH-006, the available package does not establish whether or when the retrospective review occurred. For CH-010, the classification depends on the documented interpretation of “within one business day,” the applicable timezone, business calendar, and treatment of weekends and holidays.
 
 ### Workpaper Conclusion
 
-Document the applicable change category, required criteria, actual sequence of events, exceptions, and evidence supporting the conclusion.
+The workpaper records preliminary sample results and follow-up requirements. Final conclusions remain pending validation of change evidence and resolution of the applicable timing interpretation.
 
 ## 8. Result Classification
 
-Each tested item will be classified using the following categories.
+Each selected item should be classified consistently.
 
-| Result | Definition |
-|---|---|
-| Pass | Sufficient evidence demonstrates that the item met the applicable test criteria. |
-| Exception | Sufficient evidence demonstrates that one or more applicable criteria were not met. |
-| Unable to Conclude | Evidence is insufficient, unreliable, or contradictory and the limitation cannot be resolved. |
-| Not Applicable | The specific criterion does not apply to the selected item, with the rationale documented. |
+| Classification | Definition | Documentation requirement |
+|---|---|---|
+| Pass | Evidence supports that the item met the applicable criterion. | Identify the evidence and explain how it meets the criterion. |
+| Exception | Evidence supports that the item did not meet the applicable criterion. | State the criterion, condition, supporting evidence, and rationale. |
+| Unable to Conclude | Evidence is insufficient to determine whether the criterion was met. | Identify the missing or conflicting evidence and the procedures needed to resolve the gap. |
+| Not Applicable | The criterion does not apply to the item. | Explain why the criterion does not apply. |
 
-An exception does not automatically establish a high-severity finding. Finding severity requires consideration of the control objective, nature of the exception, potential impact, relevant circumstances, and available evidence.
-
-A result of Unable to Conclude must not be silently converted to Pass or Exception without additional support.
+A result should not be changed merely to make the overall sample appear cleaner. Additional evidence or clarified criteria may support a revised classification, but the change and rationale must be documented.
 
 ## 9. Evidence Referencing
 
-Every workpaper will assign or reference unique evidence identifiers.
+Each workpaper should use a consistent reference to the relevant source tab and record identifier.
 
-The workpaper must allow a reviewer to trace:
+Examples:
 
-**Risk → Control → Criteria → Procedure → Selected Item → Evidence → Result → Conclusion**
+- `Provisioning — PR-007`
+- `Terminations — TR-006`
+- `Privileged Access — PA-004`
+- `Access Reviews — AR-006`
+- `Change Tickets — CH-010`
 
-Where an item has multiple supporting records, the workpaper will list each relevant evidence reference.
-
-Synthetic evidence must be labeled clearly and must not be presented as a real company record.
+Where a conclusion depends on multiple records, identify each record and explain the relationship. A cross-reference alone does not prove that the source records are accurate or complete.
 
 ## 10. Planned Workpaper Outputs
 
-Each completed workpaper will contain:
+Each control workpaper should include:
 
-- Workpaper ID and control reference.
-- Objective, risk, and criteria.
-- Population source, period, and completeness assessment.
-- Sample selection and rationale.
-- Detailed test steps.
-- Selected items and evidence references.
-- Expected and actual results.
-- Exceptions and unresolved limitations.
-- Conclusion and rationale.
-- Potential findings or follow-up questions.
+1. Control objective and risk.
+2. Fictional policy criterion.
+3. Population description and recorded count.
+4. Sample selection and rationale.
+5. Individual sample results.
+6. Evidence references.
+7. Preliminary exceptions and evidence gaps.
+8. Limitations and unresolved questions.
+9. Preliminary conclusion.
+10. Required follow-up procedures.
+
+The Excel audit workpapers and remediation tracker provide summary views. The individual Markdown workpapers remain the primary sample-level narrative.
 
 ## 11. Status
 
-**Current status:** Test program drafted; no testing performed.
+The planned testing procedures are documented in this program, and preliminary sample results are recorded in WP-001 through WP-005.
 
-The next step is to construct the synthetic evidence populations and supporting records, then reconcile the populations before selecting samples and executing tests.
+**Current status:** Test program documented; preliminary sample testing recorded; evidence validation, open-item resolution, and final conclusions pending.
 
----
+Outstanding work includes:
 
-**Document note:** This test program is part of an independent educational portfolio simulation. All records and results created for execution will be synthetic.
+1. Reconcile the workpapers with the findings tracker, Excel summaries, remediation validation plan, and preliminary report.
+2. Resolve or explicitly retain the outstanding evidence gaps and policy interpretations.
+3. Reassess preliminary classifications if additional evidence or clarified criteria support a change.
+4. Ensure final conclusions do not exceed the available evidence.
+5. Keep remediation status open until implementation evidence and required validation procedures support closure.
+
+This test program is part of a fictional educational portfolio simulation. It does not represent testing of an actual organization's systems or a completed audit engagement.
