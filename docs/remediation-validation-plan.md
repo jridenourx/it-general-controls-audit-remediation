@@ -321,7 +321,17 @@ Use these fields in the Excel remediation log:
 
 ## 7. Next Steps
 
-1. Add the validation plan to the repository.
-2. Link the plan from the project README or deliverables index.
-3. Update the Excel remediation log to reference the planned validation procedures.
-4. Use validated evidence and final findings to prepare the final audit report.
+The remediation validation plan is included in the repository and linked from the project documentation. The Excel remediation log records the related findings and planned validation procedures.
+
+Outstanding work is to:
+
+1. Reconcile the remediation log with `docs/findings-and-remediation-tracker.md` and the individual control workpapers.
+2. Obtain or evaluate supporting evidence for each corrective action before changing its validation status.
+3. Evaluate CH-006 and CH-010 separately, preserving the distinction between missing retrospective-review evidence and unresolved timing interpretation.
+4. Keep findings open or pending validation when evidence does not support closure.
+5. Record the validation procedure, evidence inspected, result, residual risk, and closure rationale for each finding that is evaluated.
+6. Update the preliminary report only when the evidence and documented procedures support the resulting conclusions.
+
+**Current status:** Remediation validation procedures are documented; no finding should be considered remediated or closed solely because a validation plan exists.
+
+The organization and records are fictional. The plan defines proposed validation procedures and does not represent actual remediation or a real assurance conclusion.
