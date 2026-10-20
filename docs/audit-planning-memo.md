@@ -1,9 +1,8 @@
-
 # Audit Planning Memo
 
 **Project:** Northstar Services, Inc. — IT General Controls Audit  
 **Engagement ID:** NS-ITGC-2026-01  
-**Document Status:** Draft — Planning Phase  
+**Document Status:** Preliminary — planning and sample testing documented; final conclusions pending  
 **Prepared By:** Simulated IT Audit Analyst  
 **Audit Period:** January 1–September 30, 2026  
 **Organization:** Fictional mid-sized services company  
@@ -13,27 +12,27 @@
 
 Northstar Services, Inc. is a fictional mid-sized services company that relies on business applications and centralized identity management to support employee access and daily operations.
 
-Internal Audit has initiated a review of selected IT general controls related to identity and access management and IT change management. Weaknesses in these areas could permit inappropriate access, delay removal of access after employee departures, expose sensitive business information, or allow inadequately authorized technology changes.
+This simulated engagement reviews selected IT general controls related to identity and access management and IT change management. Weaknesses in these areas could permit inappropriate access, delay removal of access after employee departures, expose sensitive business information, or allow inadequately authorized technology changes.
 
-This engagement is a simulated audit exercise. No actual Northstar Services environment, employees, systems, policies, or transactions exist.
+This engagement is an educational audit simulation. No actual Northstar Services environment, employees, systems, policies, or transactions exist.
 
 ## 2. Audit Purpose
 
-The purpose of the engagement is to evaluate selected IT general controls using a risk-based approach and to demonstrate the documentation and judgment expected in an IT audit engagement.
+The purpose of the engagement is to evaluate selected IT general controls using a risk-based approach and demonstrate the documentation and judgment expected in an IT audit engagement.
 
-The audit will assess whether selected controls are appropriately designed, whether available evidence supports their operation during the audit period, and whether identified exceptions warrant further investigation or corrective action.
+The simulation considers whether selected controls are appropriately designed against fictional policy criteria and whether the available synthetic evidence supports preliminary conclusions about selected activities during the audit period.
 
 ## 3. Audit Objectives
 
 The engagement objectives are to:
 
-1. Identify the principal risks associated with user access and IT change management.
-2. Document the control objectives and criteria used to address those risks.
-3. Evaluate the design of selected controls against documented company policies and defined requirements.
+1. Identify principal risks associated with user access and IT change management.
+2. Document control objectives and criteria used to address those risks.
+3. Evaluate the design of selected controls against fictional company policies and defined requirements.
 4. Test selected control activities using documented procedures and synthetic evidence.
-5. Assess exceptions and evidence limitations objectively.
-6. Develop proportionate recommendations and a proposed management action plan.
-7. Define evidence requirements for validating simulated corrective actions.
+5. Assess preliminary exceptions and evidence limitations objectively.
+6. Develop proportionate recommendations and proposed corrective actions.
+7. Define evidence requirements for validating simulated remediation.
 
 ## 4. Audit Scope
 
@@ -52,7 +51,7 @@ The engagement objectives are to:
 **Privileged access management**
 - Authorization and business justification for elevated access.
 - Appropriate restriction of administrative privileges.
-- Documentation of privileged-access assignments.
+- Documentation of privileged-access assignments and approvals.
 
 **Periodic user access reviews**
 - Completion of required access reviews.
@@ -72,29 +71,33 @@ The engagement excludes:
 - Penetration testing and vulnerability scanning.
 - Physical security assessments.
 - Detailed application-level business control testing.
-- Full financial statement audit procedures.
+- Full financial-statement audit procedures.
 - A formal SOX compliance or attestation engagement.
 - Testing of production systems or actual organizational records.
+- A formal compliance determination against an entire external control framework.
 
 ## 5. Audit Period and Population
 
-The proposed audit period is January 1 through September 30, 2026.
+The audit period is January 1 through September 30, 2026.
 
-The engagement will use synthetic records representing activity during that period. Before testing begins, the auditor will document the source, date range, completeness, and suitability of each population.
+The engagement uses synthetic records representing activity during that period. The source workbook contains the following recorded populations:
 
-The planned populations include:
+| Population | Recorded count | Planned sample |
+|---|---:|---:|
+| User provisioning | 15 | 10 |
+| Terminations | 12 | 10 |
+| Privileged access | 10 | 10 |
+| Access reviews | 12 | 6 |
+| Change tickets | 12 | 10 |
+| **Total planned sample items** | | **46** |
 
-- User provisioning requests and related access assignments.
-- Employee termination records and account disablement events.
-- Privileged-access assignments and approvals.
-- Periodic access-review records.
-- IT change requests, approvals, testing records, and implementation timestamps.
+These are recorded counts from the supplied synthetic workbook. They do not independently establish that the populations are complete, accurate, or generated from authoritative source systems.
 
-The synthetic populations will be constructed to support traceable testing. Population sizes and sample selections will be documented in the relevant workpapers. No sample size will be described as statistically representative unless an appropriate statistical sampling methodology is actually applied.
+The samples are judgmental rather than statistical. Results must not be projected statistically to the full populations.
 
 ## 6. Preliminary Risk Assessment
 
-The following risks establish the initial audit focus. Risk ratings are preliminary planning judgments and will be refined when the control criteria and process details are documented.
+The following risks establish the initial audit focus.
 
 | Risk ID | Risk statement | Potential impact | Preliminary priority |
 |---|---|---|---|
@@ -104,112 +107,124 @@ The following risks establish the initial audit focus. Risk ratings are prelimin
 | R-04 | Access reviews may be incomplete or fail to identify inappropriate access. | Unnecessary or inappropriate access may persist. | Medium |
 | R-05 | Technology changes may be implemented without appropriate approval or testing. | Service disruption, configuration errors, or unauthorized changes. | High |
 
-These ratings are preliminary, qualitative judgments for planning. They are not measured loss estimates or verified statements about actual control failures. The final assessment will consider the likelihood and impact of each risk under the documented scenario.
+These ratings are preliminary qualitative planning judgments. They are not measured loss estimates or verified statements about actual control failures.
 
 ## 7. Audit Criteria and Methodology
 
-The fictional company's documented policies and control requirements will serve as the primary criteria for determining whether a tested activity meets expectations.
+The fictional company's documented policies serve as the primary criteria for evaluating tested activities. These policies are maintained in `docs/internal-control-policies.md`.
 
-Relevant reference frameworks may include:
+Contextual reference frameworks may include:
 
 - NIST SP 800-53 Rev. 5 for security and privacy control concepts.
 - COBIT for governance and management of enterprise information and technology.
 - Risk-based audit practices for planning, sampling, testing, documenting exceptions, and reporting results.
 
-Framework references will be used as supporting guidance. A framework mapping alone will not establish that a control is implemented or operating effectively.
+Framework references provide context only. A framework mapping does not establish that a control is implemented or operating effectively.
 
-Before testing begins, the audit documentation will specify the applicable criteria for each control, including approval requirements, expected evidence, required timing, responsible roles, and any defined exceptions.
+The testing documentation identifies applicable requirements, including approval expectations, evidence, timing, responsible roles, and defined exceptions.
 
-## 8. Planned Audit Procedures
+## 8. Audit Procedures and Work Performed
 
-The engagement is expected to include the following activities:
+The engagement workflow includes:
 
-1. Review the fictional company's relevant policies and process descriptions.
-2. Document process walkthroughs and identify key risks and control activities.
-3. Develop a risk and control matrix.
-4. Establish a test program for each in-scope control area.
-5. Obtain and assess synthetic populations and supporting evidence.
-6. Reconcile populations and document sampling decisions.
-7. Execute test procedures and record results in workpapers.
-8. Evaluate exceptions and determine whether additional evidence is required.
-9. Develop findings and recommendations where supported.
-10. Prepare a proposed management action plan.
-11. Perform simulated follow-up testing using separate remediation evidence.
-12. Prepare a final report summarizing the results and limitations.
+1. Reviewing fictional policies and process descriptions.
+2. Documenting process narratives and control activities.
+3. Developing the risk and control matrix.
+4. Establishing the control test program.
+5. Identifying the synthetic evidence populations and known limitations.
+6. Performing preliminary record-count, identifier, and cross-reference checks.
+7. Selecting judgmental samples and documenting the sample items.
+8. Recording preliminary test results in five individual workpapers.
+9. Documenting potential exceptions, evidence gaps, and unresolved questions.
+10. Preparing a findings and remediation tracker.
+11. Defining procedures for validating proposed corrective actions.
+12. Preparing a preliminary report that describes results and limitations.
+
+The planning documentation and preliminary sample testing are now documented. The results remain subject to evidence validation and cross-document reconciliation.
 
 ## 9. Evidence and Documentation Standards
 
-Each workpaper will document, as applicable:
+Each workpaper documents, as applicable:
 
 - Control objective and risk addressed.
 - Control description and evaluation criteria.
-- Population source, date range, and completeness considerations.
+- Population source, recorded count, and completeness considerations.
 - Sampling approach and selected items.
 - Evidence reviewed and cross-references.
 - Test steps and expected results.
-- Actual results, exceptions, and unresolved questions.
+- Preliminary results, exceptions, and unresolved questions.
 - Conclusion and rationale.
-- Reviewer considerations and follow-up requirements, where applicable.
+- Follow-up requirements.
 
-Evidence will be identified by a unique reference and maintained in the repository. Synthetic evidence will be clearly distinguished from policies, criteria, and auditor-created analysis.
+Evidence is identified by reference and maintained in the repository. Synthetic evidence is distinguished from policy criteria and auditor-created analysis.
 
-A missing record will not automatically be treated as proof that the underlying activity did not occur. Conclusions will reflect the evidence obtained and any resulting limitations.
+A missing record is not automatically proof that the underlying activity did not occur. Conclusions must reflect the evidence available and any resulting limitations.
 
 ## 10. Roles and Responsibilities
 
-Because this is a portfolio simulation, all roles are fictional.
+All roles are fictional and are used solely to structure the simulation.
 
 | Role | Responsibility |
 |---|---|
-| Internal Audit Manager | Provides simulated engagement oversight and reviews significant issues. |
+| Internal Audit Manager | Simulated engagement oversight and review of significant issues. |
 | IT Audit Analyst | Plans procedures, examines evidence, performs tests, and documents conclusions. |
 | Identity and Access Management Owner | Provides simulated access-management policies and records. |
 | IT Change Management Owner | Provides simulated change-management policies and records. |
 | Business or System Owner | Provides context and responds to simulated findings. |
 | Management Action Owner | Owns proposed corrective actions and supplies simulated closure evidence. |
 
-The assigned roles do not imply that an actual engagement or management response occurred.
+These roles do not imply that an actual engagement or management response occurred.
 
 ## 11. Reporting and Finding Evaluation
 
-Potential findings will be evaluated based on the applicable criteria, the condition identified, the cause where supported, the potential impact, and the recommended corrective action.
+Potential findings are evaluated against the applicable criteria, the condition identified, the potential impact, the cause where supported, and the recommended corrective action.
 
-Findings will distinguish between confirmed exceptions within the synthetic evidence, potential control weaknesses requiring additional validation, and situations where the evidence is insufficient to reach a conclusion.
+The documentation distinguishes between preliminary exceptions, evidence gaps, and unresolved questions. Missing evidence may prevent a conclusion without proving that the control activity did not occur.
 
-Risk severity will be assigned using a documented qualitative method. The severity of an issue will not be determined solely by the number of exceptions in a sample.
-
-The final report will summarize the audit scope, methodology, results, limitations, and proposed management actions.
+Risk severity is not determined solely by the number of exceptions in a sample. The final significance assessment would consider the nature of the issue, potential impact, scope, and supporting evidence.
 
 ## 12. Limitations and Assumptions
 
 - The organization, systems, policies, evidence, and results are fictional.
-- No live systems, real employee accounts, or production configurations will be accessed.
-- The audit period and scope are proposed scenario parameters.
-- Testing conclusions will apply only to the synthetic evidence and defined criteria.
-- The project will not claim independent assurance, formal certification, or actual organizational compliance.
-- Remediation validation will use separately identified synthetic follow-up evidence.
+- No live systems, real employee accounts, or production configurations were accessed.
+- Recorded population counts do not independently establish completeness or accuracy.
+- Preliminary sample results have not been independently validated against real source systems.
+- Judgmental samples are not statistically projectable to full populations.
+- Testing conclusions apply only to the synthetic evidence and defined criteria.
+- The project does not claim independent assurance, formal certification, or actual organizational compliance.
+- Remediation validation requires separately identified supporting evidence.
 
-## 13. Planned Deliverables
+## 13. Deliverables
 
-The engagement is expected to produce:
+The repository contains:
 
 1. Audit planning memo.
-2. Process narratives and walkthrough notes.
+2. Process narratives.
 3. Risk and control matrix.
-4. Control testing program.
-5. Synthetic evidence package and evidence register.
-6. Completed control-testing workpapers.
-7. Findings register and supporting analysis.
-8. Proposed management action plan.
-9. Remediation validation workpaper.
-10. Final audit report and executive summary.
+4. Fictional internal control policies.
+5. Audit test program.
+6. Synthetic evidence package and evidence register.
+7. Population-validation documentation.
+8. Five individual control workpapers.
+9. Excel audit workpapers and remediation tracker.
+10. Findings and remediation tracker.
+11. Remediation validation plan.
+12. Preliminary audit report.
 
 ## 14. Current Status and Next Steps
 
-**Current status:** Planning draft. No control tests have been completed, and no audit findings have been established.
+**Current status:** Planning documentation and preliminary sample testing are documented. Evidence validation, cross-document reconciliation, and final conclusions remain outstanding.
 
-The next activities are to define the fictional company's internal control policies, document the processes and control owners, and create the risk and control matrix. Test criteria and synthetic evidence will be established before test results are determined.
+The workpapers document planned samples of 10 provisioning records, 10 termination records, 10 privileged-access records, 6 access-review instances, and 10 change records.
 
----
+Outstanding work includes:
 
-**Document note:** This memo is part of an independent educational portfolio simulation. It is not an actual audit planning document issued by Northstar Services, Inc.
+1. Reconcile the five workpapers against the findings tracker, Excel summaries, remediation validation plan, and preliminary report.
+2. Resolve or explicitly retain open evidence gaps, including TR-006's unknown disablement status, PA-004's missing IT Security Owner approval reference, REM-002's missing completion evidence, CH-005's missing approval timestamp, and CH-006's missing retrospective-review timestamp.
+3. Document the policy interpretation and timestamp assumptions needed to assess CH-010's emergency-review timing.
+4. Retain AR-007 as a separate population observation because it is outside WP-004's six-item sample.
+5. Do not classify Q3 access reviews as overdue at the September 30, 2026 cutoff solely because the fictional policy deadline falls on October 15, 2026.
+6. Reassess preliminary observations if additional evidence or clarified criteria change their classification.
+7. Update the report only when conclusions are supported by the documented procedures and evidence.
+
+This memo is part of an educational portfolio simulation. It is not an actual audit planning document issued by Northstar Services, Inc., and it does not represent a completed audit or final assurance conclusion.
