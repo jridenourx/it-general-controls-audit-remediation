@@ -1,107 +1,128 @@
-
 # IT General Controls Audit & Remediation
 
-**Independent Portfolio Project | 2026**  
-**Classification:** Synthetic audit simulation — not a real client engagement
+**Project type:** IT Audit / GRC / Technology Risk  
+**Organization:** Northstar Services, Inc. (fictional)  
+**Audit period:** January 1–September 30, 2026  
+**Status:** Preliminary audit simulation; evidence validation and final conclusions remain outstanding
 
 ## Project Overview
 
-This project simulates a risk-based IT general controls (ITGC) audit for a fictional mid-sized services company. It demonstrates how an IT audit analyst can plan an engagement, identify relevant risks, evaluate control requirements, examine evidence, document test results, communicate findings, and track proposed remediation.
+This project simulates an IT General Controls (ITGC) audit for a fictional organization. It demonstrates how an auditor can define control criteria, plan testing, evaluate evidence, document potential exceptions, and design remediation and follow-up validation procedures.
 
-The project emphasizes evidence-based conclusions and professional judgment rather than simply mapping framework requirements to templates.
+The project emphasizes evidence-based conclusions, traceable workpapers, and clear communication of limitations. It distinguishes confirmed facts in the synthetic records from preliminary observations and issues that remain unresolved.
 
-All organizations, personnel, systems, policies, records, audit results, and remediation activities created for this project will be fictional and clearly labeled as synthetic.
-
-## Business Scenario
-
-Northstar Services, Inc. is a fictional mid-sized services company that relies on business applications and centralized identity management to support employee access and daily operations.
-
-Internal Audit has initiated a review of selected identity and change-management controls to evaluate whether they are appropriately designed and operating in accordance with the company's documented policies.
-
-The simulated auditor is responsible for defining the audit approach, reviewing supporting evidence, testing selected controls, documenting exceptions and limitations, and preparing recommendations for management.
+**This is a synthetic portfolio project, not an actual audit engagement or an independent assurance opinion.**
 
 ## Audit Objectives
 
-The audit will evaluate whether selected IT general controls:
+The simulated audit evaluates five IT general controls:
 
-- Address relevant risks to system access and technology changes.
-- Are supported by documented policies, assigned responsibilities, and defined procedures.
-- Operate consistently with the applicable internal control criteria.
-- Produce sufficient evidence to support audit conclusions.
-- Have appropriate corrective actions when control deficiencies are identified.
-
-## Preliminary Scope
-
-The planned audit covers five control areas:
-
-1. User provisioning and access authorization.
-2. Terminated-user access removal.
-3. Privileged access management.
-4. Periodic user access reviews.
-5. IT change management, including emergency changes.
-
-The final scope, audit period, control criteria, populations, and testing approach will be documented in the audit planning materials before test results are determined.
-
-### Out of Scope
-
-- Penetration testing and vulnerability scanning.
-- Physical security assessments.
-- A complete financial statement audit.
-- A formal Sarbanes-Oxley (SOX) compliance opinion.
-- Testing of live company systems or production environments.
+| Control ID | Control Area | Audit Objective |
+|---|---|---|
+| AC-01 | User Provisioning and Access Authorization | Determine whether access is appropriately authorized and assigned roles align with approved requests. |
+| AC-02 | Terminated-User Access Removal | Determine whether access is removed within the required policy timeframe. |
+| AC-03 | Privileged Access Management | Evaluate required approvals and supporting privileged-access records. |
+| AC-04 | Periodic User Access Reviews | Evaluate review timeliness, coverage, documentation, and follow-up. |
+| CM-01 | IT Change Management | Evaluate change authorization, testing, independent oversight, and emergency-change review. |
 
 ## Methodology
 
-The simulated engagement will follow a documented, risk-based audit approach:
+The simulated audit follows an evidence-first workflow:
 
-1. Define audit objectives, scope, risks, and control criteria.
-2. Document relevant processes and identify key controls.
-3. Establish testing procedures and evidence requirements.
-4. Build clearly labeled synthetic evidence populations.
-5. Perform and document control tests using Excel-based analysis where appropriate.
-6. Evaluate exceptions, evidence limitations, and potential findings.
-7. Prepare recommendations and a proposed management action plan.
-8. Perform simulated remediation validation using separate follow-up evidence.
-9. Summarize results, limitations, and conclusions in a final report.
+1. **Plan:** Define objectives, scope, risks, criteria, and planned procedures.
+2. **Understand:** Document processes and identify key control activities.
+3. **Establish criteria:** Define the fictional internal policies against which evidence will be evaluated.
+4. **Identify evidence:** Maintain an evidence register and document relevant populations.
+5. **Test controls:** Select judgmental samples and compare available evidence with the criteria.
+6. **Document observations:** Distinguish preliminary exceptions from evidence gaps and unresolved questions.
+7. **Plan remediation:** Identify corrective actions and define how effectiveness should be validated.
+8. **Report:** Communicate preliminary results, limitations, and outstanding procedures.
 
-NIST SP 800-53 and COBIT may be used as reference frameworks for relevant control concepts. The project will distinguish framework references from the fictional company's own policies and audit criteria.
+The planned samples are judgmental and are not statistically projectable to the full populations.
 
-## Planned Deliverables
+## Repository Structure
 
-| Deliverable | Purpose |
-|---|---|
-| Audit planning memo | Establish objectives, scope, risks, and approach. |
-| Risk and control matrix | Connect business risks, control objectives, and testing procedures. |
-| Process narratives | Describe the relevant access and change-management workflows. |
-| Synthetic evidence package | Provide source records for testing and analysis. |
-| Audit workpapers | Document populations, samples, evidence, exceptions, and conclusions. |
-| Findings register | Record supported issues, risk assessments, and recommendations. |
-| Management action plan | Track proposed corrective actions and closure criteria. |
-| Remediation validation | Evaluate simulated follow-up evidence. |
-| Final audit report | Communicate results, limitations, and recommendations. |
+### Planning and criteria
 
-## Evidence and Conclusion Standards
+- [`docs/audit-planning-memo.md`](docs/audit-planning-memo.md) — Engagement background, scope, objectives, and approach.
+- [`docs/process-narratives.md`](docs/process-narratives.md) — Narratives describing the five control processes.
+- [`docs/risk-and-control-matrix.md`](docs/risk-and-control-matrix.md) — Risks, controls, objectives, and planned procedures.
+- [`docs/internal-control-policies.md`](docs/internal-control-policies.md) — Fictional policy requirements used as audit criteria.
+- [`docs/audit-test-program.md`](docs/audit-test-program.md) — Detailed control-testing procedures.
+- [`docs/evidence-register.md`](docs/evidence-register.md) — Evidence inventory and references.
+- [`docs/population-validation.md`](docs/population-validation.md) — Population reconciliation approach and documented checks.
 
-Audit conclusions will be based on predefined criteria and the evidence documented in each workpaper.
+### Testing and remediation
 
-The project will distinguish between:
+- [`workpapers/WP-001-user-provisioning.md`](workpapers/WP-001-user-provisioning.md) — Provisioning test workpaper.
+- [`workpapers/WP-002-terminated-user-access.md`](workpapers/WP-002-terminated-user-access.md) — Termination access-removal workpaper.
+- [`workpapers/WP-003-privileged-access.md`](workpapers/WP-003-privileged-access.md) — Privileged-access workpaper.
+- [`workpapers/WP-004-periodic-access-reviews.md`](workpapers/WP-004-periodic-access-reviews.md) — Periodic access-review workpaper.
+- [`workpapers/WP-005-it-change-management.md`](workpapers/WP-005-it-change-management.md) — Change-management workpaper.
+- [`workpapers/Northstar_ITGC_Audit_Workpapers_and_Remediation_Tracker.xlsx`](workpapers/Northstar_ITGC_Audit_Workpapers_and_Remediation_Tracker.xlsx) — Excel dashboard, control-testing summary, preliminary findings, selected sample results, remediation log, and synthetic source evidence.
 
-- **Design effectiveness:** Whether a control is designed appropriately to address the identified risk.
-- **Operating effectiveness:** Whether sufficient evidence demonstrates that the control operated as intended during the period tested.
-- **Exception identified:** Evidence indicates that a defined criterion was not met.
-- **Unable to conclude:** Available evidence is insufficient to support a reliable conclusion.
+### Findings and reporting
 
-A missing document will not automatically be treated as proof that an underlying activity did not occur. The significance of each exception will be evaluated against the applicable criteria, the evidence available, and the limitations of the test.
+- [`docs/findings-and-remediation-tracker.md`](docs/findings-and-remediation-tracker.md) — Consolidated preliminary observations and proposed corrective actions.
+- [`docs/remediation-validation-plan.md`](docs/remediation-validation-plan.md) — Procedures for assessing corrective actions and validating remediation.
+- [`reports/final-itgc-audit-report.md`](reports/final-itgc-audit-report.md) — Preliminary audit report and outstanding conclusion requirements.
+
+## Synthetic Evidence
+
+The project uses fictional records maintained in the Excel workbook, including:
+
+- User provisioning requests and access assignments.
+- Termination notifications and disablement records.
+- Privileged-access assignments and approval records.
+- Quarterly access-review records.
+- IT change tickets and emergency-change review records.
+
+The records include both supporting evidence and intentional evidence gaps or potential deviations. They are designed to support a realistic audit exercise, not to represent actual company data.
+
+## Preliminary Observations
+
+The current working papers identify matters requiring further investigation, including:
+
+- A provisioning role mismatch and missing approval evidence.
+- Termination records with delayed or unconfirmed access removal.
+- A privileged-access assignment without located evidence of one required approval.
+- Periodic access reviews recorded as late and incomplete follow-up evidence.
+- Change-management records with approval, independence, or retrospective-review questions.
+
+These are preliminary observations, not a final set of confirmed control failures. Additional evidence may change the classification or significance of individual items.
+
+## Tools and Skills Demonstrated
+
+- Excel-based evidence organization and audit tracking.
+- Risk and control matrix development.
+- Control design and criteria documentation.
+- Audit planning and judgmental sample selection.
+- Evidence evaluation and exception documentation.
+- Access-control and change-management testing.
+- Remediation planning and validation design.
+- Technical writing and risk communication.
+- Clear documentation of limitations and unresolved issues.
+
+## Framework Context
+
+The project uses fictional internal policies as its primary testing criteria. NIST SP 800-53 and COBIT may be used as contextual references for control design.
+
+This project does not claim formal compliance with NIST, COBIT, SOX, or any other regulatory or assurance framework.
 
 ## Limitations
 
-This is an educational portfolio simulation. It does not represent an actual audit, independent assurance engagement, certification, or assessment of a real organization.
+- Northstar Services, Inc. and all underlying records are fictional.
+- The population counts and record relationships require documented reconciliation before final conclusions are issued.
+- Judgmental samples do not support statistical projection.
+- Missing evidence does not automatically prove that a control activity did not occur.
+- Remediation is not considered successful until implementation evidence and follow-up testing support that conclusion.
+- No actual audit opinion, compliance certification, or assurance conclusion is represented.
 
-All test results and remediation outcomes will be simulated. No claims of actual compliance, real-world control effectiveness, or verified remediation will be made.
+## Project Status and Next Steps
 
-## Repository Status
+The project contains the audit planning package, fictional criteria, synthetic evidence, five control workpapers, preliminary findings, remediation tracking, and a remediation validation plan.
 
-**Current phase:** Project planning and scope definition.
+Outstanding work includes completing evidence reconciliation, finalizing test results and risk assessments, obtaining and evaluating any additional evidence, and updating the report to reflect only conclusions supported by completed procedures.
 
-Additional deliverables will be added as the audit scenario, control criteria, synthetic evidence, and testing procedures are developed.
+The project should be described as a **preliminary ITGC audit simulation** until those steps have been completed and documented.
 
