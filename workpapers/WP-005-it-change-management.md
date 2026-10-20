@@ -75,15 +75,18 @@ The sample includes standard and emergency changes and records with potential ap
 
 ## 6. Preliminary Results
 
-The initial review identified the following records requiring additional assessment:
+The initial review identified four records requiring additional assessment. The observations below are preliminary and do not represent completed testing of all ten selected records.
 
 | Change ID | Preliminary Observation | Required Assessment |
 |---|---|---|
-| CH-004 | Approver and implementer are recorded as the same person | Determine whether the documented process meets the separation-of-duties criterion |
-| CH-005 | Approval timestamp is missing | Determine whether approval occurred before implementation |
-| CH-006 | Emergency retrospective review timestamp is absent | Determine whether timely retrospective review can be evidenced |
-| CH-010 | Emergency retrospective review was recorded after the expected deadline | Validate timestamps and assess the timing exception |
+| CH-004 | Approver and implementer are recorded as the same person | Inspect the complete ticket and determine whether independent authorization or oversight is evidenced. |
+| CH-005 | Approval timestamp is missing | Determine whether reliable alternative evidence establishes that approval preceded implementation. |
+| CH-006 | Emergency retrospective-review timestamp is absent from the supplied record | Seek alternative evidence of the review, reviewer, and completion time. |
+| CH-010 | The recorded implementation and retrospective-review timestamps require deadline analysis | Validate the timestamps, time zone, applicable business calendar, and policy interpretation before classifying the item. |
 
+The other six selected records must also have their test attributes and results documented. A record must not be classified as passing solely because no issue appears in a summary or reconciliation worksheet.
+
+The sample is judgmental and does not support statistical projection to the full change population.
 The remaining sample records require evaluation against the full criteria and supporting evidence before their results can be finalized. Do not classify a record as passing solely because no issue is noted in the summary fields.
 
 ## 7. Detailed Test Results
@@ -168,27 +171,29 @@ Do not infer that retrospective review never occurred solely because the timesta
 
 **Observation**
 
-The record shows emergency change implementation at 1:20 AM on Friday, July 3, 2026, and retrospective review at 10:00 AM on Monday, July 6, 2026.
+The supplied record shows emergency-change implementation at 1:20 AM on Friday, July 3, 2026, and retrospective review at 10:00 AM on Monday, July 6, 2026.
 
 **Criteria**
 
-The fictional policy requires retrospective review within one business day.
+The fictional policy requires retrospective review within one business day. The applicable deadline must be determined using a documented interpretation of that requirement and reliable, comparable timestamps.
 
 **Preliminary assessment**
 
-The recorded review occurred after the next-business-day deadline when measured from the implementation timestamp. Using the stated policy and timestamps, the expected deadline was 1:20 AM on Monday, July 6, 2026. The recorded review was at 10:00 AM that day.
+The review is recorded after the implementation date, but the precise compliance deadline cannot be finalized from the timestamps alone. The reviewer must confirm the applicable time zone, timestamp reliability, business calendar, and interpretation of “within one business day.” The weekend and any applicable holiday-calendar treatment must also be considered.
 
 **Preliminary disposition**
 
-Exception — the recorded retrospective review occurred 8 hours and 40 minutes after the calculated deadline.
+**Open — timing assessment pending.** Do not finalize CH-010 as late or compliant until the deadline calculation and applicable policy interpretation have been documented.
 
 **Follow-up evidence**
-- Validate the implementation and retrospective review timestamps.
-- Confirm the applicable time zone and whether the system timestamps are comparable.
-- Inspect the emergency rationale, authorization, and implementation outcome.
-- Determine whether an approved exception or documented policy interpretation applies.
+- Validate the implementation and retrospective-review timestamps.
+- Confirm the time zone and whether both timestamps use the same basis.
+- Confirm the applicable business calendar and any relevant holiday treatment.
+- Document how the fictional policy's “within one business day” requirement is interpreted and calculated.
+- Inspect the emergency rationale, authorization, implementation outcome, and retrospective-review evidence.
+- Determine whether a documented exception or approved policy interpretation applies.
 
-Do not assume an exception or grace period that is not supported by the stated policy.
+Do not assume an exception, grace period, or deadline calculation that is not supported by the policy or reliable evidence.
 
 ## 8. Test Attributes and Evidence Requirements
 
@@ -212,20 +217,19 @@ Evidence must be evaluated for relevance, reliability, and sufficiency. A popula
 
 | Change ID | Issue | Preliminary Status | Follow-Up |
 |---|---|---|---|
-| CH-004 | Approver and implementer recorded as the same person | Exception requiring assessment | Inspect evidence of independent oversight |
-| CH-005 | Approval timestamp missing | Unable to Conclude | Obtain reliable approval timing evidence |
-| CH-006 | Emergency retrospective review timestamp missing | Unable to Conclude | Obtain review evidence and timestamp |
-| CH-010 | Retrospective review recorded after calculated deadline | Exception | Validate timestamps and assess any documented exception |
+| CH-004 | Approver and implementer recorded as the same person | Open — independent oversight assessment required | Inspect the full ticket and determine whether independent authorization or oversight is evidenced. |
+| CH-005 | Approval timestamp missing | Unable to Conclude pending further evidence | Obtain reliable approval timing evidence or document the limitation. |
+| CH-006 | Emergency retrospective-review timestamp missing | Unable to Conclude pending further evidence | Obtain review evidence and a reliable completion timestamp, if available. |
+| CH-010 | Retrospective-review timing requires interpretation | Open — deadline assessment pending | Validate timestamps, business calendar, time zone, and policy interpretation before classification. |
 
-These classifications are preliminary. Final results must be based on the supporting evidence actually inspected.
-
+These are preliminary dispositions. Final results must reflect the supporting evidence actually inspected and the documented criteria applied.
 ## 10. Conclusion
 
 **Overall control conclusion: Pending.**
 
-The initial review identified potential separation-of-duties and emergency-review timing exceptions, as well as missing approval and retrospective-review timestamps.
+The initial review identified a potential separation-of-duties issue for CH-004 and evidence gaps involving the approval timestamp for CH-005 and the retrospective-review timestamp for CH-006. CH-010 requires further analysis of the recorded implementation and review times against the fictional policy's “within one business day” requirement. Its final classification remains open until the timestamps, applicable business calendar, time zone, and policy interpretation have been validated.
 
-CH-004 requires assessment of whether independent oversight was established. CH-005 and CH-006 remain inconclusive unless alternative evidence can establish the required approval and review activities. CH-010 appears to have exceeded the one-business-day retrospective review deadline based on the recorded timestamps, subject to validation of timestamp reliability and applicable policy interpretation.
+The other six selected changes also require documented test results before the sample assessment can be finalized.
 
 Before finalizing the control assessment:
 
