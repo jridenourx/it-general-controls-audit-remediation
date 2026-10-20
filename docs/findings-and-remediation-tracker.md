@@ -16,7 +16,7 @@ This tracker consolidates preliminary observations identified during testing of 
 - AC-04 — Periodic User Access Reviews
 - CM-01 — IT Change Management
 
-The tracker is intended to support consistent evaluation, remediation planning, and follow-up validation. It is not a final statement of control effectiveness.
+The tracker supports consistent evaluation, remediation planning, and follow-up validation. It is not a final statement of control effectiveness.
 
 ## 2. Finding Classification
 
@@ -175,4 +175,58 @@ A missing document or timestamp is not, by itself, proof that the underlying act
 - **Condition:** The source record lacks an approval timestamp.
 - **Criteria:** Changes require documented approval before implementation.
 - **Risk:** The organization may be unable to demonstrate that the change was authorized before it was implemented.
-- **Recommended remediation:** Retrieve the change-management audit trail
+- **Recommended remediation:** Retrieve the change-management audit trail and other authorized records to determine whether approval occurred before implementation. If timing cannot be substantiated, document the limitation and assess the required corrective action.
+- **Suggested owner:** IT Change Manager.
+- **Validation evidence:** Change ticket, approval history, implementation timestamp, and any documented investigation or corrective action.
+- **Status:** Open — approval timing cannot be concluded until additional evidence is evaluated.
+
+### F-12 — Emergency-change retrospective review timing requires validation
+
+- **Control:** CM-01
+- **Reference:** WP-005; record CH-010
+- **Classification:** Open assessment item — timing not yet determined
+- **Condition:** The source record shows implementation at 1:20 AM on Friday, July 3, 2026, and retrospective review at 10:00 AM on Monday, July 6, 2026.
+- **Criteria:** The fictional policy requires retrospective review within one business day.
+- **Risk:** If the required review deadline was missed, emergency changes may not receive timely post-implementation oversight.
+- **Recommended remediation:** Validate the timestamps, time zone, applicable business calendar, and interpretation of “within one business day.” Document the deadline calculation before deciding whether the record represents a policy deviation.
+- **Suggested owner:** IT Change Manager.
+- **Validation evidence:** Change ticket, reliable implementation and review timestamps, applicable business calendar, documented policy interpretation, and retrospective-review record.
+- **Status:** Open — do not classify as late or compliant until the timing assessment is documented.
+
+## 4. Consolidated Remediation Priorities
+
+The following priorities are provisional and should be confirmed after the underlying evidence and risks are assessed.
+
+| Priority | Area | Immediate next step |
+|---|---|---|
+| High | Terminated-user access | Establish the actual access status for TR-006 and investigate any confirmed delay. |
+| High | Privileged access | Confirm whether required approvals for PA-004 were obtained before assignment and assess current access. |
+| High | Provisioning | Reconcile the PR-007 role mismatch against authorization and actual permissions. |
+| Medium | Access reviews | Validate review dates and determine whether the REM-002 follow-up was completed. |
+| Medium | Change management | Resolve the CH-004 independence question and obtain approval evidence for CH-005. |
+| Pending assessment | Emergency changes | Validate CH-010's deadline calculation before classifying its timeliness. |
+
+These are proposed priorities for the simulation, not a formally approved risk rating.
+
+## 5. Remediation Closure Requirements
+
+A finding or observation should not be marked closed solely because a procedure or policy was updated.
+
+Before closure, the reviewer should:
+
+1. Obtain evidence that the corrective action was implemented.
+2. Verify that the evidence addresses the underlying issue.
+3. Perform the planned follow-up test, where applicable.
+4. Record the test procedure, evidence inspected, result, and any remaining limitations.
+5. Document the residual risk or approved risk acceptance, if relevant.
+6. Update the status only when the closure criteria have been met.
+
+## 6. Overall Status and Limitations
+
+The audit simulation remains preliminary. The consolidated observations above are based on the current synthetic evidence package and must be reconciled to the individual workpapers and Excel tracker.
+
+The current Excel `Exceptions & Gaps` worksheet summarizes selected exceptions and evidence gaps; it is not a complete record of all planned sample tests. Final conclusions require item-by-item testing documentation and reconciliation to the individual workpapers.
+
+The planned samples are judgmental and are not statistically projectable to the full populations. Population reconciliation checks do not independently establish completeness or accuracy. Missing evidence does not automatically prove that an activity did not occur.
+
+No overall control-effectiveness conclusion has been issued. All records, findings, and remediation activities are fictional and are included
