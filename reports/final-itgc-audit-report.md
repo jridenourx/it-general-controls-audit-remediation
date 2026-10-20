@@ -249,6 +249,9 @@ No remediation should be reported as successful until implementation evidence ha
 - The documented population counts do not, by themselves, establish population completeness.
 - Judgmental sample results are not statistically projectable to the full populations.
 - Missing evidence may result in an inability to conclude; it does not automatically prove that an activity did not occur.
+- The current Excel `Exceptions & Gaps` worksheet summarizes selected exceptions and evidence gaps; it is not a complete record of all planned sample tests.
+- Final conclusions require item-by-item testing documentation and reconciliation to the individual workpapers and Excel tracker.
+- Timing conclusions depend on reliable timestamps, applicable policy criteria, and documented interpretation of relevant business-day requirements.
 - No formal SOX opinion, regulatory certification, or assurance conclusion is provided.
 
 ## 11. Overall Conclusion and Report Status
