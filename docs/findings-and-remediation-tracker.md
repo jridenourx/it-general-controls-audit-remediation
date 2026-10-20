@@ -1,35 +1,36 @@
-# IT General Controls Audit — Findings and Remediation Tracker
+# Northstar Services, Inc. — Findings and Remediation Tracker
 
-**Organization:** Northstar Services, Inc. (fictional)  
 **Engagement ID:** NS-ITGC-2026-01  
-**Audit period:** January 1–September 30, 2026  
-**Document status:** Preliminary — pending evidence validation and final risk assessment  
-**Classification:** Synthetic portfolio simulation; not an actual audit engagement
+**Audit Period:** January 1–September 30, 2026  
+**Document Status:** Preliminary — evidence validation and final conclusions pending  
+**Classification:** Synthetic portfolio simulation
 
 ## 1. Purpose
 
-This tracker consolidates preliminary observations identified during testing of five IT general controls:
+This document consolidates preliminary findings, evidence gaps, recommended corrective actions, and validation requirements identified during the simulated IT General Controls (ITGC) audit of Northstar Services, Inc., a fictional organization.
 
-- AC-01 — User Provisioning and Access Authorization
-- AC-02 — Terminated-User Access Removal
-- AC-03 — Privileged Access Management
-- AC-04 — Periodic User Access Reviews
-- CM-01 — IT Change Management
+The findings are preliminary. They must be validated against the underlying evidence and applicable fictional internal policies before final classification or reporting.
 
-The tracker supports consistent evaluation, remediation planning, and follow-up validation. It is not a final statement of control effectiveness.
+Missing evidence does not automatically establish that a control activity did not occur. Where reliable evidence is insufficient, the appropriate result is *unable to conclude* until additional procedures are completed.
 
-## 2. Finding Classification
+## 2. Finding Summary
 
-| Classification | Meaning |
-|---|---|
-| Preliminary exception | Available evidence indicates a potential deviation from the stated control requirement. Confirm the facts and assess significance before finalizing. |
-| Evidence gap / unable to conclude | The available evidence is insufficient to determine whether the control operated as required. |
-| Remediation validation pending | A corrective action has been proposed but has not yet been independently validated. |
-| Closed | Sufficient evidence demonstrates that the agreed corrective action was implemented and is operating as intended. |
+| Finding | Control | Reference | Preliminary classification | Status |
+|---|---|---|---|---|
+| F-01 | AC-01 — Provisioning | WP-001 / PR-007 | Potential role-authorization exception | Open — validate |
+| F-02 | AC-01 — Provisioning | WP-001 / PR-010 | Evidence gap / unable to conclude | Open — validate |
+| F-03 | AC-02 — Terminations | WP-002 / TR-003 | Potential timing exception | Open — validate |
+| F-04 | AC-02 — Terminations | WP-002 / TR-005 | Potential effective-time exception | Open — validate |
+| F-05 | AC-02 — Terminations | WP-002 / TR-006 | Evidence gap / unable to conclude | Open — validate |
+| F-06 | AC-02 — Terminations | WP-002 / TR-008 | Potential timing exception | Open — validate |
+| F-07 | AC-03 — Privileged Access | WP-003 / PA-004 | Evidence gap / potential authorization exception | Open — validate |
+| F-08 | AC-04 — Access Reviews | WP-004 / AR-003, AR-004, AR-006, AR-008 | Potential timing exceptions | Open — validate |
+| F-09 | AC-04 — Access Reviews | WP-004 / AR-006 / REM-002 | Evidence gap / unable to conclude | Open — validate |
+| F-10 | CM-01 — Change Management | WP-005 / CH-004 | Potential approval-independence exception | Open — validate |
+| F-11 | CM-01 — Change Management | WP-005 / CH-005 | Evidence gap / unable to conclude | Open — validate |
+| F-12 | CM-01 — Change Management | WP-005 / CH-006 and CH-010 | Evidence gap and timing assessment pending | Open — validate separately |
 
-A missing document or timestamp is not, by itself, proof that the underlying activity did not occur. Alternative evidence should be considered where appropriate and documented.
-
-## 3. Consolidated Preliminary Findings
+## 3. Detailed Findings
 
 ### F-01 — Provisioned role may not match approved request
 
@@ -46,16 +47,16 @@ A missing document or timestamp is not, by itself, proof that the underlying act
 
 ### F-02 — Provisioning approval evidence not located
 
-- **Control:** AC-01
+- **Control:** AC-01 — User Provisioning and Access Authorization
 - **Reference:** WP-001; record PR-010
 - **Classification:** Evidence gap / unable to conclude
-- **Condition:** The evidence package does not contain an approval record for the sampled provisioning event.
-- **Criteria:** The fictional policy requires approval before access is provisioned.
-- **Risk:** Access may be granted without appropriate authorization.
-- **Recommended remediation:** Search the approved request system and other authorized records for evidence of approval before provisioning. If approval cannot be substantiated, investigate the access and follow the organization's corrective-action process.
-- **Suggested owner:** IT Access Administration and the relevant Application Owner.
-- **Validation evidence:** Original request, approval timestamp, provisioning timestamp, and any documented investigation or corrective action.
-- **Status:** Open — do not classify as a confirmed operating failure until evidence is evaluated.
+- **Condition:** The current evidence package does not contain an approval record for PR-010.
+- **Criteria:** The fictional internal policy requires appropriate authorization before access is provisioned.
+- **Risk:** Access may have been granted without the required authorization, or the organization may be unable to demonstrate that authorization occurred.
+- **Recommended remediation:** Search for the original request, approval workflow, system audit trail, and other reliable supporting records. If approval was not obtained, assess the current access and take corrective action through the established authorization process.
+- **Suggested owner:** Application Owner and IT Access Administration.
+- **Validation evidence:** Approved request, approval history, provisioning timestamp, current access listing, and any corrective-action record.
+- **Status:** Open — obtain reliable approval evidence or document the unresolved gap.
 
 ### F-03 — Terminated-user access removal exceeded the required timeframe
 
@@ -65,14 +66,14 @@ A missing document or timestamp is not, by itself, proof that the underlying act
 - **Condition:** The recorded notification-to-disablement interval is 4 hours and 40 minutes, exceeding the four-hour standard.
 - **Criteria:** Standard terminations must be disabled within four hours after IT notification.
 - **Risk:** A former employee may retain access longer than permitted.
-- **Recommended remediation:** Confirm the notification and disablement timestamps, assess whether access was usable during the delay, and determine why the standard was missed. Implement an escalation or monitoring mechanism if the process review identifies a gap.
+- **Recommended remediation:** Confirm the notification and disablement timestamps, assess whether access was usable during the delay, and determine why the standard was missed. Implement escalation or monitoring if the process review identifies a gap.
 - **Suggested owner:** IT Access Administration.
 - **Validation evidence:** Notification record, identity-provider or application disablement logs, investigation notes, and evidence of any process improvement.
 - **Status:** Open — validate timestamps and impact.
 
 ### F-04 — Involuntary termination removal occurred after the agreed effective time
 
-- **Control:** AC-02
+- **Control:** AC-02 — Terminated-User Access Removal
 - **Reference:** WP-002; record TR-005
 - **Classification:** Preliminary exception
 - **Condition:** The recorded disablement occurred two minutes after the agreed effective removal time.
@@ -85,7 +86,7 @@ A missing document or timestamp is not, by itself, proof that the underlying act
 
 ### F-05 — Terminated-user disablement status cannot be confirmed
 
-- **Control:** AC-02
+- **Control:** AC-02 — Terminated-User Access Removal
 - **Reference:** WP-002; record TR-006
 - **Classification:** Evidence gap / unable to conclude
 - **Condition:** The sampled record lacks a disablement timestamp and has an `UNKNOWN` status.
@@ -98,7 +99,7 @@ A missing document or timestamp is not, by itself, proof that the underlying act
 
 ### F-06 — Terminated-user access removal exceeded the required timeframe
 
-- **Control:** AC-02
+- **Control:** AC-02 — Terminated-User Access Removal
 - **Reference:** WP-002; record TR-008
 - **Classification:** Preliminary exception
 - **Condition:** The recorded notification-to-disablement interval is 4 hours and 50 minutes, exceeding the four-hour standard.
@@ -132,101 +133,118 @@ A missing document or timestamp is not, by itself, proof that the underlying act
   - AR-004: April 18, 2026; Q1 deadline April 15, 2026.
   - AR-006: July 19, 2026; Q2 deadline July 15, 2026.
   - AR-008: July 25, 2026; Q2 deadline July 15, 2026.
-- **Criteria:** Reviews must be completed within 15 calendar days after quarter-end.
-- **Risk:** Inappropriate or unnecessary access may remain in place longer than intended before review.
-- **Recommended remediation:** Confirm completion dates and supporting review evidence. Identify why deadlines were missed and establish review ownership, reminders, escalation, and completion tracking as appropriate.
-- **Suggested owner:** Application Owners, with oversight from IT Security.
-- **Validation evidence:** Review records, completion timestamps, assigned reviewers, documented decisions, and evidence of escalation or process improvements.
-- **Status:** Open — validate the underlying review records and assess the effect of the delays.
+- **Criteria:** The fictional policy requires quarterly access reviews to be completed within 15 calendar days after quarter-end.
+- **Risk:** Access issues may remain unidentified or unresolved longer than intended.
+- **Recommended remediation:** Validate the review artifacts and dates, determine why the deadlines were missed, and consider deadline monitoring, escalation, and clearer review ownership.
+- **Suggested owner:** Application Owners and IT Security.
+- **Validation evidence:** Review records, completion timestamps, reviewer decisions, evidence of follow-up, and any updated monitoring procedures.
+- **Status:** Open — validate review evidence and timing.
 
-**Additional review item:** AR-007 was also recorded as late in the source population, with a completion date of July 20, 2026. It was not included in the six-record WP-004 sample described in the current workpaper. Treat it as a separate population observation pending validation, not as a sampled result. Determine whether additional testing is appropriate before drawing a broader conclusion.
+**Scope note:** AR-007 was separately identified as late in the source population but was not included in the six-record WP-004 sample. It must remain a separate population observation unless additional testing is performed and documented. Q3 reviews due October 15, 2026 were not overdue at the September 30, 2026 audit cutoff.
 
-### F-09 — Evidence of a completed access review and follow-up is incomplete
+### F-09 — Evidence of access-review follow-up removal was not located
 
-- **Control:** AC-04
-- **Reference:** WP-004; record AR-006 and associated removal ticket REM-002
+- **Control:** AC-04 — Periodic User Access Reviews
+- **Reference:** WP-004; record AR-006; follow-up ticket REM-002
 - **Classification:** Evidence gap / unable to conclude
-- **Condition:** The source package records a follow-up removal ticket, but completion evidence for the follow-up was not located.
-- **Criteria:** The fictional policy requires documented reviewer decisions and follow-up on identified access issues.
-- **Risk:** Access identified for removal may not have been removed, or the organization may be unable to demonstrate that the issue was resolved.
-- **Recommended remediation:** Obtain the removal ticket history and relevant access logs. Verify whether removal occurred and whether the reviewer or designated owner confirmed resolution.
+- **Condition:** The current evidence package does not contain completion evidence for REM-002, the follow-up removal ticket associated with AR-006.
+- **Criteria:** Identified access-review issues should be followed through to resolution, with evidence retained to demonstrate completion.
+- **Risk:** Access identified for removal may remain in place, or the organization may be unable to demonstrate that the required follow-up occurred.
+- **Recommended remediation:** Retrieve REM-002 ticket history and relevant system logs. Confirm whether the access change was completed, verify the resulting access state, and document reviewer follow-up.
 - **Suggested owner:** Application Owner and IT Access Administration.
-- **Validation evidence:** REM-002 ticket history, removal timestamp, updated access listing, and reviewer sign-off.
-- **Status:** Open — confirm whether the required follow-up was completed.
+- **Validation evidence:** REM-002 ticket history, removal timestamp, updated access listing, and documented review sign-off.
+- **Status:** Open — confirm whether removal occurred and whether it was effective.
 
-### F-10 — Change approval and implementation responsibilities may not be sufficiently separated
+### F-10 — Change approval independence requires validation
 
 - **Control:** CM-01 — IT Change Management
 - **Reference:** WP-005; record CH-004
 - **Classification:** Preliminary exception
-- **Condition:** The recorded change approver and implementer are the same individual.
-- **Criteria:** The fictional policy requires that the approver and implementer not be the same sole person.
-- **Risk:** A change may be implemented without sufficient independent review, increasing the possibility of unauthorized or inadequately tested changes.
-- **Recommended remediation:** Determine whether a separate documented reviewer or compensating control existed. If not, establish independent approval or documented compensating review for relevant changes.
+- **Condition:** The same individual is recorded as approver and implementer.
+- **Criteria:** The fictional policy requires appropriate authorization and independent oversight, or an approved compensating control where applicable.
+- **Risk:** A change may be implemented without adequate independent review.
+- **Recommended remediation:** Inspect the full change ticket and approval history. Determine whether a separate reviewer or adequate compensating control existed. If not, assess the deviation and strengthen independent review procedures.
 - **Suggested owner:** IT Change Manager.
-- **Validation evidence:** Change ticket, approval history, implementation logs, testing evidence, and any documented independent or compensating review.
-- **Status:** Open — assess whether independent oversight or a compensating control existed.
+- **Validation evidence:** Change ticket, approval history, implementation logs, and evidence of any compensating review.
+- **Status:** Open — confirm independent oversight or a compensating control.
 
-### F-11 — Change approval timing cannot be established from the available record
+### F-11 — Change approval timestamp is missing
 
-- **Control:** CM-01
+- **Control:** CM-01 — IT Change Management
 - **Reference:** WP-005; record CH-005
 - **Classification:** Evidence gap / unable to conclude
 - **Condition:** The source record lacks an approval timestamp.
-- **Criteria:** Changes require documented approval before implementation.
-- **Risk:** The organization may be unable to demonstrate that the change was authorized before it was implemented.
-- **Recommended remediation:** Retrieve the change-management audit trail and other authorized records to determine whether approval occurred before implementation. If timing cannot be substantiated, document the limitation and assess the required corrective action.
+- **Criteria:** The fictional policy requires documented authorization before implementation, subject to the approved emergency-change process where applicable.
+- **Risk:** The organization may be unable to demonstrate that the change was authorized before implementation.
+- **Recommended remediation:** Retrieve the ticket audit trail and reliable approval and implementation timestamps. Determine whether approval preceded implementation and document the result.
 - **Suggested owner:** IT Change Manager.
-- **Validation evidence:** Change ticket, approval history, implementation timestamp, and any documented investigation or corrective action.
-- **Status:** Open — approval timing cannot be concluded until additional evidence is evaluated.
+- **Validation evidence:** Approval history, ticket audit trail, implementation logs, and documented assessment.
+- **Status:** Open — obtain reliable evidence of approval timing or document the unresolved gap.
 
-### F-12 — Emergency-change retrospective review timing requires validation
+### F-12 — Emergency-change retrospective review evidence and timing require validation
 
-- **Control:** CM-01
-- **Reference:** WP-005; record CH-010
-- **Classification:** Open assessment item — timing not yet determined
-- **Condition:** The source record shows implementation at 1:20 AM on Friday, July 3, 2026, and retrospective review at 10:00 AM on Monday, July 6, 2026.
-- **Criteria:** The fictional policy requires retrospective review within one business day.
-- **Risk:** If the required review deadline was missed, emergency changes may not receive timely post-implementation oversight.
-- **Recommended remediation:** Validate the timestamps, time zone, applicable business calendar, and interpretation of “within one business day.” Document the deadline calculation before deciding whether the record represents a policy deviation.
-- **Suggested owner:** IT Change Manager.
-- **Validation evidence:** Change ticket, reliable implementation and review timestamps, applicable business calendar, documented policy interpretation, and retrospective-review record.
-- **Status:** Open — do not classify as late or compliant until the timing assessment is documented.
+- **Control:** CM-01 — IT Change Management
+- **Reference:** WP-005; records CH-006 and CH-010
+- **Classification:** Mixed — evidence gap for CH-006; timing assessment pending for CH-010
+- **Condition:**
+  - **CH-006:** The current evidence package does not contain a retrospective-review timestamp. The available evidence does not establish whether the required review occurred or when it was completed.
+  - **CH-010:** The recorded implementation timestamp is July 3, 2026, at 1:20 AM, and the recorded retrospective-review timestamp is July 6, 2026, at 10:00 AM. Compliance with the requirement to review within one business day cannot yet be determined because the applicable policy interpretation and timing conventions require validation.
+- **Criteria:** The fictional internal policy requires retrospective review of applicable emergency changes within one business day.
+- **Risk:** Emergency changes may not receive timely, documented post-implementation oversight, increasing the risk that issues or unauthorized changes remain unidentified.
+- **Recommended remediation:**
+  1. Evaluate CH-006 and CH-010 separately.
+  2. For CH-006, search the change-management system, workflow history, and other reliable records for retrospective-review evidence and a completion timestamp.
+  3. For CH-010, verify the implementation and review timestamps, time zone, applicable business calendar, and meaning of “within one business day.”
+  4. Document the deadline calculation and classify CH-010 only after the applicable criteria and timestamps have been validated.
+  5. If a policy deviation is confirmed, document the cause and determine whether process improvements or additional oversight are warranted.
+- **Suggested owner:** IT Change Manager, coordinating with the change approver.
+- **Validation evidence:** Emergency change tickets, approval and review records, reliable timestamps, documented policy interpretation, business-calendar assumptions, and evidence of any corrective action.
+- **Status:** Open — CH-006 evidence gap and CH-010 timing assessment must be resolved separately before final classification.
 
-## 4. Consolidated Remediation Priorities
+## 4. Remediation Governance
 
-The following priorities are provisional and should be confirmed after the underlying evidence and risks are assessed.
+The following requirements apply to all findings:
 
-| Priority | Area | Immediate next step |
-|---|---|---|
-| High | Terminated-user access | Establish the actual access status for TR-006 and investigate any confirmed delay. |
-| High | Privileged access | Confirm whether required approvals for PA-004 were obtained before assignment and assess current access. |
-| High | Provisioning | Reconcile the PR-007 role mismatch against authorization and actual permissions. |
-| Medium | Access reviews | Validate review dates and determine whether the REM-002 follow-up was completed. |
-| Medium | Change management | Resolve the CH-004 independence question and obtain approval evidence for CH-005. |
-| Pending assessment | Emergency changes | Validate CH-010's deadline calculation before classifying its timeliness. |
+1. Assign an accountable owner for each corrective action.
+2. Agree on a target date and document it in the remediation tracker.
+3. Retain evidence supporting the corrective action and its implementation.
+4. Perform follow-up validation appropriate to the risk and nature of the control.
+5. Record the validation result and any residual risk.
+6. Do not mark a finding closed solely on the basis of a management statement that the issue has been corrected.
+7. Where a control deviation is confirmed and management accepts residual risk, retain documented approval by the appropriate authority.
 
-These are proposed priorities for the simulation, not a formally approved risk rating.
+The Excel workpaper and remediation tracker should be reconciled to this document so that finding IDs, record references, classifications, owners, status, and closure evidence remain consistent.
 
-## 5. Remediation Closure Requirements
+## 5. Reporting Limitations
 
-A finding or observation should not be marked closed solely because a procedure or policy was updated.
+- Northstar Services, Inc. and all underlying records are fictional.
+- This document supports a portfolio simulation and is not an actual audit deliverable.
+- All findings remain preliminary until the relevant evidence and criteria are validated.
+- The judgmental sample results are not statistically projectable to the full populations.
+- Missing evidence does not automatically prove that a control activity did not occur.
+- AR-007 remains a separate population observation unless separately tested and documented.
+- CH-010 must not be classified as late or compliant until the applicable policy interpretation and timing calculation are validated.
+- No formal SOX opinion, regulatory certification, or overall control-effectiveness conclusion is provided.
 
-Before closure, the reviewer should:
+## 6. Overall Status
 
-1. Obtain evidence that the corrective action was implemented.
-2. Verify that the evidence addresses the underlying issue.
-3. Perform the planned follow-up test, where applicable.
-4. Record the test procedure, evidence inspected, result, and any remaining limitations.
-5. Document the residual risk or approved risk acceptance, if relevant.
-6. Update the status only when the closure criteria have been met.
+**Overall control-effectiveness conclusion: Pending.**
 
-## 6. Overall Status and Limitations
+The preliminary procedures identified potential policy deviations and evidence gaps across the five control areas. The available documentation supports the planned audit approach, the recorded sample results, and the follow-up actions described above. It does not yet support a final overall control-effectiveness conclusion.
 
-The audit simulation remains preliminary. The consolidated observations above are based on the current synthetic evidence package and must be reconciled to the individual workpapers and Excel tracker.
+Before finalizing the simulated report, the auditor should:
 
-The current Excel `Exceptions & Gaps` worksheet summarizes selected exceptions and evidence gaps; it is not a complete record of all planned sample tests. Final conclusions require item-by-item testing documentation and reconciliation to the individual workpapers.
+1. Complete the required evidence reconciliation.
+2. Resolve or appropriately classify the outstanding sample results.
+3. Validate the criteria and evidence supporting each finding.
+4. Assess the significance of confirmed deviations.
+5. Document management responses where applicable.
+6. Reconcile this document with the Excel findings and remediation tracker.
+7. Complete and document remediation validation where corrective actions are represented as implemented.
+8. Update the final report to reflect only conclusions supported by completed procedures.
 
-The planned samples are judgmental and are not statistically projectable to the full populations. Population reconciliation checks do not independently establish completeness or accuracy. Missing evidence does not automatically prove that an activity did not occur.
+No overall control-effectiveness conclusion has been issued. All records, findings, and remediation activities are fictional and are included solely for educational and portfolio demonstration purposes.
 
-No overall control-effectiveness conclusion has been issued. All records, findings, and remediation activities are fictional and are included
+---
+
+*End of preliminary findings and remediation tracker.*
