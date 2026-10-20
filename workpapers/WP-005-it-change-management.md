@@ -1,465 +1,273 @@
 # WP-005 — IT Change Management
 
-## 1. Workpaper Information
+**Engagement ID:** NS-ITGC-2026-01  
+**Control ID:** CM-01  
+**Audit Period:** January 1–September 30, 2026  
+**Population:** 12 change tickets  
+**Planned Sample:** 10 records  
+**Sample Selection:** Judgmental  
+**Workpaper Status:** Preliminary — evidence validation and final conclusions pending  
+**Classification:** Synthetic portfolio simulation
 
-| Field | Details |
+## 1. Control Objective
+
+Determine whether selected IT changes were appropriately authorized, tested, implemented, and reviewed in accordance with Northstar Services, Inc.’s fictional internal change-management policy.
+
+The testing considers approval evidence, approval timing, testing documentation, separation between approver and implementer, and retrospective review of emergency changes where applicable.
+
+## 2. Audit Criteria
+
+The primary criteria are the fictional internal control policies documented in `docs/internal-control-policies.md` and the related procedures in `docs/audit-test-program.md`.
+
+The workpaper evaluates whether the available records support the following requirements:
+
+- Changes have documented authorization before implementation, except where an approved emergency-change process applies.
+- Required testing is documented before implementation.
+- Approval and implementation responsibilities are appropriately separated, or an approved compensating control is evidenced.
+- Emergency changes receive the required retrospective review within the applicable policy timeframe.
+- Supporting records are retained sufficiently to demonstrate that required control activities occurred.
+
+The applicable policy language and any relevant timing definitions must be confirmed before final conclusions are issued.
+
+## 3. Population and Sampling
+
+The source evidence workbook contains 12 change-ticket records. Ten records were selected for judgmental testing:
+
+CH-001, CH-002, CH-003, CH-004, CH-005, CH-006, CH-007, CH-008, CH-009, and CH-010.
+
+The selection is not statistical. Results must not be projected to the full population as statistical estimates.
+
+Population reconciliation is documented separately in `docs/population-validation.md` and the audit tracker workbook. The recorded population count alone does not establish completeness.
+
+## 4. Procedures Performed
+
+For each selected record, the workpaper considers the available evidence for:
+
+1. Change identification and supporting ticket documentation.
+2. Approval evidence and timing relative to implementation.
+3. Recorded testing status.
+4. Approver and implementer identities.
+5. Retrospective review evidence for emergency changes, where applicable.
+6. Exceptions, missing evidence, and matters requiring follow-up.
+
+The results below reflect the information recorded in the synthetic evidence package. A preliminary pass based on record attributes does not, by itself, establish that the underlying control operated effectively in practice.
+
+## 5. Sample Results Summary
+
+| Record | Preliminary result | Observation |
+|---|---|---|
+| CH-001 | Preliminary pass | Recorded attributes support the tested approval, testing, and role-separation checks; underlying evidence still requires validation. |
+| CH-002 | Preliminary pass | Recorded attributes support the tested approval, testing, and role-separation checks; underlying evidence still requires validation. |
+| CH-003 | Preliminary pass | Recorded attributes support the tested approval, testing, and role-separation checks; underlying evidence still requires validation. |
+| CH-004 | Exception — follow-up required | The same individual is recorded as approver and implementer. Independent oversight or an adequate compensating control has not yet been established. |
+| CH-005 | Unable to conclude | The source record lacks an approval timestamp. |
+| CH-006 | Unable to conclude | The current evidence package lacks a retrospective review timestamp. |
+| CH-007 | Preliminary pass | Recorded attributes support the tested approval, testing, and role-separation checks; underlying evidence still requires validation. |
+| CH-008 | Preliminary pass | Recorded attributes support the tested approval, testing, and role-separation checks; underlying evidence still requires validation. |
+| CH-009 | Preliminary pass | Recorded attributes support the tested approval, testing, and role-separation checks; underlying evidence still requires validation. |
+| CH-010 | Timing assessment unresolved | The emergency change was implemented on July 3, 2026, at 1:20 AM, and the recorded retrospective review occurred on July 6, 2026, at 10:00 AM. Classification remains open pending confirmation of the applicable policy interpretation and timing conventions. |
+
+These are preliminary results based on the recorded evidence. The six preliminary passes are limited to the attributes described above and should not be interpreted as final conclusions on the overall operating effectiveness of change management.
+
+## 6. Detailed Test Results
+
+### CH-001 — Preliminary Pass
+
+**Preliminary result:** Pass for the recorded attributes tested.
+
+The recorded attributes support the preliminary checks for approval before implementation, a `TEST-PASS` status, and different recorded approver and implementer identities.
+
+**Limitations and follow-up:**
+
+- Inspect the underlying change ticket and approval evidence.
+- Confirm that the approval was valid and related to the implemented change.
+- Verify that the testing record supports the change that was implemented.
+- Confirm that timestamps and identities are reliable.
+
+**Conclusion:** Preliminary pass for recorded attributes only; final conclusion pending evidence validation.
+
+### CH-002 — Preliminary Pass
+
+**Preliminary result:** Pass for the recorded attributes tested.
+
+The recorded attributes support the preliminary checks for approval before implementation, a `TEST-PASS` status, and different recorded approver and implementer identities.
+
+**Limitations and follow-up:**
+
+- Inspect the underlying change ticket and approval evidence.
+- Confirm that the approval was valid and related to the implemented change.
+- Verify that the testing record supports the change that was implemented.
+- Confirm that timestamps and identities are reliable.
+
+**Conclusion:** Preliminary pass for recorded attributes only; final conclusion pending evidence validation.
+
+### CH-003 — Preliminary Pass
+
+**Preliminary result:** Pass for the recorded attributes tested.
+
+The recorded attributes support the preliminary checks for approval before implementation, a `TEST-PASS` status, and different recorded approver and implementer identities.
+
+**Limitations and follow-up:**
+
+- Inspect the underlying change ticket and approval evidence.
+- Confirm that the approval was valid and related to the implemented change.
+- Verify that the testing record supports the change that was implemented.
+- Confirm that timestamps and identities are reliable.
+
+**Conclusion:** Preliminary pass for recorded attributes only; final conclusion pending evidence validation.
+
+### CH-004 — Approval Independence Exception
+
+**Preliminary result:** Exception — follow-up required.
+
+The source record lists the same individual as approver and implementer. This raises a potential segregation-of-duties concern because the person implementing the change may also have approved it.
+
+**Risk consideration:** If no independent approval or adequate compensating control exists, an unauthorized or inadequately reviewed change could be implemented without sufficient oversight.
+
+**Required follow-up:**
+
+- Inspect the complete change ticket and supporting approval history.
+- Determine whether an independent reviewer approved the change.
+- Identify any documented compensating control and assess whether it operated as intended.
+- Confirm the applicable policy requirements and whether an exception was formally authorized.
+
+**Conclusion:** Preliminary exception pending confirmation of independent oversight or an adequate compensating control.
+
+### CH-005 — Approval Timestamp Missing
+
+**Preliminary result:** Unable to conclude.
+
+The source record does not contain an approval timestamp. The available record therefore does not establish whether approval occurred before implementation.
+
+A missing timestamp is an evidence gap; it does not, by itself, prove that approval never occurred.
+
+**Risk consideration:** Without reliable approval timing, the organization may be unable to demonstrate that the change was authorized before implementation.
+
+**Required follow-up:**
+
+- Retrieve the original change ticket and approval history.
+- Inspect system-generated timestamps, workflow logs, or other reliable supporting records.
+- Determine whether approval preceded implementation.
+- Document the result and assess any deviation from policy.
+
+**Conclusion:** Unable to conclude until reliable approval-timing evidence is obtained or the evidence gap is otherwise resolved.
+
+### CH-006 — Retrospective Review Evidence Missing
+
+**Preliminary result:** Unable to conclude.
+
+The current evidence package does not contain a retrospective review timestamp for CH-006.
+
+The absence of a timestamp prevents confirmation that the required retrospective review occurred within the applicable timeframe. It does not establish that no review occurred.
+
+**Risk consideration:** Emergency changes that are not appropriately reviewed may introduce unassessed risk, and missing evidence can prevent management from demonstrating that the required oversight occurred.
+
+**Required follow-up:**
+
+- Retrieve the complete change ticket and emergency-change documentation, if applicable.
+- Search for retrospective approval or review records, including workflow history and system-generated timestamps.
+- Confirm whether retrospective review was required for this change.
+- If required, compare the verified review timestamp with the applicable deadline.
+- Document any confirmed deviation and the supporting evidence.
+
+**Conclusion:** Unable to conclude pending retrieval and assessment of retrospective review evidence.
+
+### CH-007 — Preliminary Pass
+
+**Preliminary result:** Pass for the recorded attributes tested.
+
+The recorded attributes support the preliminary checks for approval before implementation, a `TEST-PASS` status, and different recorded approver and implementer identities.
+
+**Limitations and follow-up:**
+
+- Inspect the underlying change ticket and approval evidence.
+- Confirm that the approval was valid and related to the implemented change.
+- Verify that the testing record supports the change that was implemented.
+- Confirm that timestamps and identities are reliable.
+
+**Conclusion:** Preliminary pass for recorded attributes only; final conclusion pending evidence validation.
+
+### CH-008 — Preliminary Pass
+
+**Preliminary result:** Pass for the recorded attributes tested.
+
+The recorded attributes support the preliminary checks for approval before implementation, a `TEST-PASS` status, and different recorded approver and implementer identities.
+
+**Limitations and follow-up:**
+
+- Inspect the underlying change ticket and approval evidence.
+- Confirm that the approval was valid and related to the implemented change.
+- Verify that the testing record supports the change that was implemented.
+- Confirm that timestamps and identities are reliable.
+
+**Conclusion:** Preliminary pass for recorded attributes only; final conclusion pending evidence validation.
+
+### CH-009 — Preliminary Pass
+
+**Preliminary result:** Pass for the recorded attributes tested.
+
+The recorded attributes support the preliminary checks for approval before implementation, a `TEST-PASS` status, and different recorded approver and implementer identities.
+
+**Limitations and follow-up:**
+
+- Inspect the underlying change ticket and approval evidence.
+- Confirm that the approval was valid and related to the implemented change.
+- Verify that the testing record supports the change that was implemented.
+- Confirm that timestamps and identities are reliable.
+
+**Conclusion:** Preliminary pass for recorded attributes only; final conclusion pending evidence validation.
+
+### CH-010 — Emergency Change Review Timing Unresolved
+
+**Preliminary result:** Unable to finalize timing classification.
+
+The recorded implementation timestamp is July 3, 2026, at 1:20 AM. The recorded retrospective review timestamp is July 6, 2026, at 10:00 AM.
+
+The elapsed calendar time alone is not sufficient to conclude whether the review complied with a requirement to occur “within one business day.” The applicable policy interpretation and timing conventions have not yet been established.
+
+**Risk consideration:** If the required retrospective review was late or not properly completed, emergency changes may remain insufficiently reviewed after implementation.
+
+**Required follow-up:**
+
+- Confirm that CH-010 qualifies as an emergency change and that retrospective review was required.
+- Retrieve the applicable policy language defining “within one business day.”
+- Confirm the timezone and reliability of both timestamps.
+- Establish the applicable business calendar, including weekend and holiday treatment.
+- Calculate the deadline using the confirmed policy interpretation.
+- Inspect the retrospective review evidence and determine whether the review addressed the change and its risks.
+
+**Conclusion:** Timing classification remains open. Do not classify CH-010 as compliant or noncompliant until the policy interpretation, timestamps, and deadline calculation have been validated.
+
+## 7. Preliminary Observations
+
+The selected records identify three matters requiring particular follow-up:
+
+1. **CH-004 — Approval independence:** The same individual is recorded as approver and implementer. Independent oversight or a compensating control must be established.
+2. **CH-005 — Approval evidence:** The approval timestamp is missing, so approval before implementation cannot yet be confirmed.
+3. **CH-006 — Retrospective review evidence:** The current package does not establish when the retrospective review occurred, or whether the required review was completed within the applicable timeframe.
+
+CH-010 remains a separate timing-assessment issue. Its classification depends on confirmation of the governing policy interpretation and reliable timing information.
+
+These observations are preliminary and should not be treated as final findings until the supporting evidence and relevant criteria have been validated.
+
+## 8. Required Follow-up and Closure Evidence
+
+| Record | Required closure evidence |
 |---|---|
-| Engagement ID | NS-ITGC-2026-01 |
-| Control ID | CM-01 |
-| Risk ID | R-05 |
-| Workpaper ID | WP-005 |
-| Audit Period | January 1–September 30, 2026 |
-| Process | IT Change Management |
-| Population Source | `data/Northstar_Synthetic_ITGC_Evidence.xlsx` — Change Tickets worksheet |
-| Related Evidence | EV-005 — Change Tickets; EV-008 — Internal Control Policies |
-| Status | Preliminary — Sample Results Documented; Exceptions and Evidence Gaps Remain Open |
+| CH-004 | Complete ticket, independent approval or documented compensating control, and assessment against the applicable policy. |
+| CH-005 | Reliable approval history or system-generated evidence establishing whether approval preceded implementation. |
+| CH-006 | Retrospective review evidence, applicable deadline, verified timestamps, and assessment of compliance. |
+| CH-010 | Confirmed policy interpretation, verified timestamps and timezone, business-calendar treatment, deadline calculation, and review evidence. |
+| CH-001, CH-002, CH-003, CH-007, CH-008, CH-009 | Supporting ticket, approval, testing, implementation, and identity evidence sufficient to validate the preliminary pass results. |
 
-**Simulation notice:** Northstar Services, Inc. and all associated records are fictional. This workpaper documents a synthetic portfolio audit simulation, not an actual client engagement.
+An item should not be marked closed solely because management states that the issue has been corrected. Closure should be supported by relevant documentation and, where appropriate, follow-up testing.
 
-## 2. Control Objective
+## 9. Overall Workpaper Conclusion
 
-Determine whether IT changes were documented, appropriately authorized, tested, and implemented with adequate evidence, including whether emergency changes received the required retrospective review and whether responsibilities were appropriately separated.
+The 10 selected records have individual preliminary results documented in this workpaper. The testing identifies potential approval-independence and evidence-retention issues, together with an unresolved emergency-change timing assessment.
 
-## 3. Control Criteria
+The results remain preliminary. The available evidence does not yet support a final conclusion on the operating effectiveness of the change-management control.
 
-The fictional Northstar internal control policy requires:
+Before finalizing this workpaper, the auditor should validate the underlying ticket records, resolve the identified evidence gaps, confirm the applicable policy criteria, and reconcile the final results with the findings tracker and final audit report.
 
-- A change ticket before implementation.
-- Approval before implementation.
-- Documented testing and implementation outcomes.
-- The approver and implementer should not be the same sole person.
-- Emergency changes must document the rationale, authorization, and implementation outcome.
-- Emergency changes must receive retrospective review within one business day.
-- Supporting records must be retained for at least two years.
-
-The internal policy is the primary audit criterion for this simulation. The phrase “should not be the same sole person” is evaluated in the context of available approval and implementation records. It should not be expanded into an unsupported requirement that every change involve a particular number of personnel beyond the stated policy.
-
-## 4. Audit Procedures
-
-### 4.1 Standard Changes
-
-1. Identify the change population for the audit period.
-2. Validate population completeness, uniqueness, and relevant cross-references before relying on the population.
-3. Select 10 change records for judgmental testing, or test the full population if fewer than 10 eligible records exist.
-4. Verify that a change ticket existed before implementation.
-5. Compare approval and implementation timestamps to determine whether approval preceded implementation.
-6. Inspect testing evidence and the documented implementation outcome.
-7. Compare approver and implementer information to assess separation of duties.
-8. Record exceptions, evidence gaps, and follow-up requirements.
-
-### 4.2 Emergency Changes
-
-For emergency changes, additionally:
-
-1. Inspect the documented emergency rationale.
-2. Verify that authorization is documented.
-3. Inspect evidence of the implementation outcome.
-4. Compare the implementation timestamp with the retrospective review timestamp.
-5. Determine whether retrospective review occurred within one business day.
-6. If the retrospective review timestamp is missing, document the evidence gap rather than assuming the review did not occur.
-
-## 5. Population and Sampling
-
-| Attribute | Description |
-|---|---|
-| Source worksheet | Change Tickets |
-| Records listed in source | 12 |
-| Planned sample size | 10 |
-| Sampling method | Judgmental |
-| Initial sample | CH-001 through CH-010 |
-| Records outside the initial sample | CH-011 and CH-012 |
-| Statistical projection | Not applicable |
-| Population validation | Required before finalizing reliance on the sample |
-
-The sample includes standard and emergency changes and records with potential approval, separation-of-duties, and retrospective-review issues. The sample is judgmental and does not support statistical projection to the full population.
-
-## 6. Summary of Sample Results
-
-The following results are based on the fields available in the synthetic Change Tickets worksheet. A preliminary pass means the listed fields support the specific attributes described; it does not establish that all control requirements were satisfied or that the overall control is effective.
-
-| Change ID | Type | Preliminary Result | Basis and Limitation |
-|---|---|---|---|
-| CH-001 | Standard | Preliminary pass for documented attributes | Ticket creation, approval, testing, and implementation timestamps are populated. Approval precedes implementation; testing is marked `TEST-PASS`; approver and implementer IDs differ. Supporting artifacts and population completeness still require validation. |
-| CH-002 | Standard | Preliminary pass for documented attributes | Ticket creation, approval, testing, and implementation timestamps are populated. Approval precedes implementation; testing is marked `TEST-PASS`; approver and implementer IDs differ. Supporting artifacts and population completeness still require validation. |
-| CH-003 | Standard | Preliminary pass for documented attributes | Ticket creation, approval, testing, and implementation timestamps are populated. Approval precedes implementation; testing is marked `TEST-PASS`; approver and implementer IDs differ. Supporting artifacts and population completeness still require validation. |
-| CH-004 | Standard | Exception — preliminary | The approver and implementer IDs match. Determine whether independent authorization or oversight is evidenced elsewhere. |
-| CH-005 | Standard | Unable to conclude | Approval timestamp is missing. The available record does not establish whether approval preceded implementation. |
-| CH-006 | Emergency | Unable to conclude | Retrospective review timestamp is missing from the supplied record. Obtain additional evidence before concluding whether review occurred. |
-| CH-007 | Standard | Preliminary pass for documented attributes | Ticket creation, approval, testing, and implementation timestamps are populated. Approval precedes implementation; testing is marked `TEST-PASS`; approver and implementer IDs differ. Supporting artifacts and population completeness still require validation. |
-| CH-008 | Standard | Preliminary pass for documented attributes | Ticket creation, approval, testing, and implementation timestamps are populated. Approval precedes implementation; testing is marked `TEST-PASS`; approver and implementer IDs differ. Supporting artifacts and population completeness still require validation. |
-| CH-009 | Standard | Preliminary pass for documented attributes | Ticket creation, approval, testing, and implementation timestamps are populated. Approval precedes implementation; testing is marked `TEST-PASS`; approver and implementer IDs differ. Supporting artifacts and population completeness still require validation. |
-| CH-010 | Emergency | Open — timing assessment pending | Implementation is recorded on July 3, 2026, at 1:20 AM; retrospective review is recorded on July 6, 2026, at 10:00 AM. Validate timestamps, time zone, business calendar, and policy interpretation before classifying the result. |
-
-**Important limitation:** The source workbook provides structured records and status fields, not necessarily the underlying change tickets, approval histories, test artifacts, system logs, or retrospective-review evidence. The preliminary passes above are limited to the attributes visible in the supplied records. They must not be represented as independently verified control operation where supporting evidence has not been inspected.
-
-## 7. Detailed Test Results
-
-### 7.1 CH-001 — Routine Configuration Update
-
-**Record attributes**
-
-- Change type: Standard
-- Ticket created: January 7, 2026, at 9:00 AM
-- Approval recorded: January 7, 2026, at 10:00 AM
-- Testing recorded: January 7, 2026, at 11:00 AM
-- Implementation recorded: January 7, 2026, at 1:00 PM
-- Testing result: `TEST-PASS`
-- Approver ID: U-1201
-- Implementer ID: U-1202
-- Change status: `IMPLEMENTED`
-
-**Preliminary assessment**
-
-The recorded ticket, approval, testing, and implementation timestamps are populated and occur in the expected sequence. The approver and implementer IDs differ, and the testing status is recorded as `TEST-PASS`.
-
-**Preliminary disposition**
-
-Preliminary pass for the attributes represented in the supplied record, subject to validation of the underlying ticket and supporting evidence.
-
-**Follow-up evidence**
-
-- Original change ticket and approval history.
-- Supporting testing evidence.
-- Implementation outcome or system record.
-- Evidence supporting the recorded identities and timestamps.
-
-### 7.2 CH-002 — Database Index Adjustment
-
-**Record attributes**
-
-- Change type: Standard
-- Ticket created: January 20, 2026, at 8:00 AM
-- Approval recorded: January 20, 2026, at 8:30 AM
-- Testing recorded: January 20, 2026, at 9:00 AM
-- Implementation recorded: January 20, 2026, at 10:00 AM
-- Testing result: `TEST-PASS`
-- Approver ID: U-1203
-- Implementer ID: U-1204
-- Change status: `IMPLEMENTED`
-
-**Preliminary assessment**
-
-The recorded approval precedes implementation, the testing timestamp precedes implementation, and the approver and implementer IDs differ. The testing status is recorded as `TEST-PASS`.
-
-**Preliminary disposition**
-
-Preliminary pass for the attributes represented in the supplied record, subject to validation of the underlying ticket and supporting evidence.
-
-**Follow-up evidence**
-
-- Original change ticket and approval history.
-- Supporting testing evidence.
-- Implementation outcome or system record.
-- Evidence supporting the recorded identities and timestamps.
-
-### 7.3 CH-003 — Workflow Rule Update
-
-**Record attributes**
-
-- Change type: Standard
-- Ticket created: February 12, 2026, at 10:00 AM
-- Approval recorded: February 12, 2026, at 10:20 AM
-- Testing recorded: February 12, 2026, at 11:00 AM
-- Implementation recorded: February 12, 2026, at 11:30 AM
-- Testing result: `TEST-PASS`
-- Approver ID: U-1205
-- Implementer ID: U-1206
-- Change status: `IMPLEMENTED`
-
-**Preliminary assessment**
-
-The recorded approval precedes implementation, the testing timestamp precedes implementation, and the approver and implementer IDs differ. The testing status is recorded as `TEST-PASS`.
-
-**Preliminary disposition**
-
-Preliminary pass for the attributes represented in the supplied record, subject to validation of the underlying ticket and supporting evidence.
-
-**Follow-up evidence**
-
-- Original change ticket and approval history.
-- Supporting testing evidence.
-- Implementation outcome or system record.
-- Evidence supporting the recorded identities and timestamps.
-
-### 7.4 CH-004 — Approver and Implementer
-
-**Observation**
-
-The change record lists the same person, U-1207, as approver and implementer.
-
-**Criteria**
-
-The fictional policy states that the approver and implementer should not be the same sole person.
-
-**Risk**
-
-Insufficient separation of responsibilities may increase the risk that a change is implemented without independent review.
-
-**Preliminary disposition**
-
-Exception requiring further assessment. Inspect the complete ticket and related approval evidence to determine whether another independent person reviewed or authorized the change. The matching IDs alone do not establish whether independent oversight or a compensating control existed.
-
-**Follow-up evidence**
-
-- Complete change ticket.
-- Approval and implementation records.
-- Evidence of any independent review or authorization.
-- Supporting system logs where available.
-
-### 7.5 CH-005 — Missing Approval Timestamp
-
-**Observation**
-
-The change record does not contain an approval timestamp.
-
-**Record attributes**
-
-- Change type: Standard
-- Ticket created: March 18, 2026, at 8:00 AM
-- Approval timestamp: Not recorded
-- Testing recorded: March 18, 2026, at 9:00 AM
-- Implementation recorded: March 18, 2026, at 9:30 AM
-- Testing result: `TEST-PASS`
-- Approver ID: U-1208
-- Implementer ID: U-1209
-
-**Criteria**
-
-The fictional policy requires approval before implementation.
-
-**Risk**
-
-Without reliable timing evidence, the auditor cannot establish whether approval preceded implementation.
-
-**Preliminary disposition**
-
-Unable to conclude pending additional evidence. The presence of an approver ID does not establish when approval occurred. A missing timestamp is not conclusive proof that approval did not occur.
-
-**Follow-up evidence**
-
-- Original change ticket and approval history.
-- Approval identity, decision, and timestamp.
-- Implementation timestamp and supporting system record.
-- Alternative reliable evidence demonstrating that approval occurred before implementation, if available.
-
-### 7.6 CH-006 — Emergency Retrospective Review Evidence Gap
-
-**Observation**
-
-The emergency change record does not contain a retrospective review timestamp.
-
-**Record attributes**
-
-- Change type: Emergency
-- Ticket created: April 2, 2026, at 2:00 AM
-- Approval recorded: April 2, 2026, at 2:10 AM
-- Testing recorded: April 2, 2026, at 2:15 AM
-- Implementation recorded: April 2, 2026, at 2:30 AM
-- Testing result: `LIMITED-TEST`
-- Approver ID: U-1210
-- Implementer ID: U-1211
-- Source note: Emergency justification present; retrospective review timestamp absent
-
-**Criteria**
-
-The fictional policy requires emergency changes to document the rationale, authorization, and implementation outcome, with retrospective review within one business day.
-
-**Risk**
-
-Without evidence of retrospective review, the auditor cannot establish whether the emergency change received the required review on time.
-
-**Preliminary disposition**
-
-Unable to conclude pending additional evidence. The source record identifies an emergency justification but does not provide a retrospective review timestamp. The `LIMITED-TEST` status also requires consideration of the testing performed and the rationale for any limitation.
-
-**Follow-up evidence**
-
-- Emergency rationale and authorization.
-- Implementation outcome.
-- Testing performed and any documented limitations.
-- Retrospective review record, reviewer identity, and timestamp.
-- Supporting ticket history or other reliable evidence of review completion.
-
-Do not infer that retrospective review never occurred solely because the timestamp is absent from the supplied record.
-
-### 7.7 CH-007 — Database Patch
-
-**Record attributes**
-
-- Change type: Standard
-- Ticket created: April 20, 2026, at 8:00 AM
-- Approval recorded: April 20, 2026, at 8:15 AM
-- Testing recorded: April 20, 2026, at 9:00 AM
-- Implementation recorded: April 20, 2026, at 10:00 AM
-- Testing result: `TEST-PASS`
-- Approver ID: U-1212
-- Implementer ID: U-1213
-- Change status: `IMPLEMENTED`
-
-**Preliminary assessment**
-
-The recorded approval precedes implementation, the testing timestamp precedes implementation, and the approver and implementer IDs differ. The testing status is recorded as `TEST-PASS`.
-
-**Preliminary disposition**
-
-Preliminary pass for the attributes represented in the supplied record, subject to validation of the underlying ticket and supporting evidence.
-
-**Follow-up evidence**
-
-- Original change ticket and approval history.
-- Supporting testing evidence.
-- Implementation outcome or system record.
-- Evidence supporting the recorded identities and timestamps.
-
-### 7.8 CH-008 — Access Workflow Update
-
-**Record attributes**
-
-- Change type: Standard
-- Ticket created: May 14, 2026, at 10:00 AM
-- Approval recorded: May 14, 2026, at 10:15 AM
-- Testing recorded: May 14, 2026, at 10:45 AM
-- Implementation recorded: May 14, 2026, at 11:00 AM
-- Testing result: `TEST-PASS`
-- Approver ID: U-1214
-- Implementer ID: U-1215
-- Change status: `IMPLEMENTED`
-
-**Preliminary assessment**
-
-The recorded approval precedes implementation, the testing timestamp precedes implementation, and the approver and implementer IDs differ. The testing status is recorded as `TEST-PASS`.
-
-**Preliminary disposition**
-
-Preliminary pass for the attributes represented in the supplied record, subject to validation of the underlying ticket and supporting evidence.
-
-**Follow-up evidence**
-
-- Original change ticket and approval history.
-- Supporting testing evidence.
-- Implementation outcome or system record.
-- Evidence supporting the recorded identities and timestamps.
-
-### 7.9 CH-009 — CRM Integration Change
-
-**Record attributes**
-
-- Change type: Standard
-- Ticket created: June 9, 2026, at 9:00 AM
-- Approval recorded: June 9, 2026, at 9:20 AM
-- Testing recorded: June 9, 2026, at 10:00 AM
-- Implementation recorded: June 9, 2026, at 10:15 AM
-- Testing result: `TEST-PASS`
-- Approver ID: U-1216
-- Implementer ID: U-1217
-- Change status: `IMPLEMENTED`
-
-**Preliminary assessment**
-
-The recorded approval precedes implementation, the testing timestamp precedes implementation, and the approver and implementer IDs differ. The testing status is recorded as `TEST-PASS`.
-
-**Preliminary disposition**
-
-Preliminary pass for the attributes represented in the supplied record, subject to validation of the underlying ticket and supporting evidence.
-
-**Follow-up evidence**
-
-- Original change ticket and approval history.
-- Supporting testing evidence.
-- Implementation outcome or system record.
-- Evidence supporting the recorded identities and timestamps.
-
-### 7.10 CH-010 — Emergency Retrospective Review Timing
-
-**Observation**
-
-The supplied record shows emergency-change implementation at 1:20 AM on Friday, July 3, 2026, and retrospective review at 10:00 AM on Monday, July 6, 2026.
-
-**Criteria**
-
-The fictional policy requires retrospective review within one business day. The applicable deadline must be determined using a documented interpretation of that requirement and reliable, comparable timestamps.
-
-**Preliminary assessment**
-
-The review is recorded after the implementation date, but the precise compliance deadline cannot be finalized from the timestamps alone. Confirm the applicable time zone, timestamp reliability, business calendar, and interpretation of “within one business day.” Weekend and any applicable holiday-calendar treatment must also be considered.
-
-**Preliminary disposition**
-
-**Open — timing assessment pending.** Do not finalize CH-010 as late or compliant until the deadline calculation and applicable policy interpretation have been documented.
-
-**Follow-up evidence**
-
-- Validate the implementation and retrospective-review timestamps.
-- Confirm the time zone and whether both timestamps use the same basis.
-- Confirm the applicable business calendar and any relevant holiday treatment.
-- Document how the fictional policy's “within one business day” requirement is interpreted and calculated.
-- Inspect the emergency rationale, authorization, implementation outcome, and retrospective-review evidence.
-- Determine whether a documented exception or approved policy interpretation applies.
-
-Do not assume an exception, grace period, or deadline calculation that is not supported by the policy or reliable evidence.
-
-## 8. Test Attributes and Evidence Requirements
-
-For each sampled change, inspect and document the following attributes:
-
-| Attribute | Expected Evidence |
-|---|---|
-| Ticket creation | Change ticket ID and creation timestamp |
-| Authorization | Approver identity, decision, and timestamp |
-| Pre-implementation approval | Approval timestamp compared with implementation timestamp |
-| Testing | Test plan, test results, or documented rationale for any applicable alternative |
-| Implementation | Implementation timestamp and outcome |
-| Separation of duties | Approver and implementer identities, plus evidence of independent review where relevant |
-| Emergency rationale | Documented reason for emergency handling |
-| Retrospective review | Reviewer identity, decision, and timestamp |
-| Evidence traceability | Ticket history, system records, and related supporting evidence |
-
-Evidence must be evaluated for relevance, reliability, and sufficiency. A populated status field does not independently prove that a control activity occurred as required.
-
-## 9. Exception and Follow-Up Summary
-
-| Change ID | Issue | Preliminary Status | Follow-Up |
-|---|---|---|---|
-| CH-001 | No exception identified in the supplied fields for the attributes reviewed | Preliminary pass for documented attributes | Validate underlying ticket and supporting evidence. |
-| CH-002 | No exception identified in the supplied fields for the attributes reviewed | Preliminary pass for documented attributes | Validate underlying ticket and supporting evidence. |
-| CH-003 | No exception identified in the supplied fields for the attributes reviewed | Preliminary pass for documented attributes | Validate underlying ticket and supporting evidence. |
-| CH-004 | Approver and implementer recorded as the same person | Open — independent oversight assessment required | Inspect the full ticket and determine whether independent authorization or oversight is evidenced. |
-| CH-005 | Approval timestamp missing | Unable to conclude pending further evidence | Obtain reliable approval timing evidence or document the limitation. |
-| CH-006 | Emergency retrospective-review timestamp missing | Unable to conclude pending further evidence | Obtain review evidence and a reliable completion timestamp, if available. |
-| CH-007 | No exception identified in the supplied fields for the attributes reviewed | Preliminary pass for documented attributes | Validate underlying ticket and supporting evidence. |
-| CH-008 | No exception identified in the supplied fields for the attributes reviewed | Preliminary pass for documented attributes | Validate underlying ticket and supporting evidence. |
-| CH-009 | No exception identified in the supplied fields for the attributes reviewed | Preliminary pass for documented attributes | Validate underlying ticket and supporting evidence. |
-| CH-010 | Retrospective-review timing requires interpretation | Open — deadline assessment pending | Validate timestamps, business calendar, time zone, and policy interpretation before classification. |
-
-These are preliminary dispositions. Final results must reflect the supporting evidence actually inspected and the documented criteria applied.
-
-## 10. Conclusion
-
-**Overall control conclusion: Pending.**
-
-The documented sample results support preliminary passes for specified record attributes for CH-001, CH-002, CH-003, CH-007, CH-008, and CH-009. Those preliminary passes are limited to the fields represented in the supplied synthetic records and remain subject to validation of the underlying evidence.
-
-The initial review identified a potential separation-of-duties issue for CH-004 and evidence gaps involving the approval timestamp for CH-005 and the retrospective-review timestamp for CH-006. CH-010 requires further analysis of the recorded implementation and review times against the fictional policy's “within one business day” requirement. Its final classification remains open until the timestamps, applicable business calendar, time zone, and policy interpretation have been validated.
-
-Before finalizing the control assessment:
-
-1. Complete and document population validation.
-2. Inspect supporting evidence for all sampled changes.
-3. Resolve or document the CH-004 separation-of-duties assessment.
-4. Obtain reliable approval timing evidence for CH-005 if available.
-5. Obtain retrospective review evidence for CH-006 if available.
-6. Validate CH-010 timestamps and document the timing calculation.
-7. Record any additional procedures and their results.
-8. Document unresolved limitations and their effect on the overall assessment.
-
-The preliminary observations do not establish the overall operating effectiveness of CM-01. The sample results must not be statistically projected to the full population.
-
-## 11. Limitations
-
-- This is a fictional audit simulation using synthetic evidence.
-- The sampling method is judgmental and does not support statistical projection.
-- Missing documentation does not automatically prove that the underlying activity did not occur.
-- Timing conclusions depend on reliable and comparable timestamps and the stated fictional policy.
-- Preliminary passes based on structured record fields are not substitutes for inspecting underlying evidence.
-- The workpaper does not represent a formal external audit opinion, SOX attestation, or certification of compliance.
-- Final conclusions depend on population validation, evidence sufficiency, and documented resolution or disposition of outstanding items.
+This workpaper is part of a synthetic portfolio simulation. It does not represent an actual audit engagement or a formal compliance opinion.
