@@ -1,78 +1,145 @@
 # Population Validation Memo — Northstar ITGC Audit
 
 **Engagement ID:** NS-ITGC-2026-01  
-**Audit period:** January 1–September 30, 2026  
+**Audit Period:** January 1–September 30, 2026  
 **Entity:** Northstar Services, Inc. (fictional)  
-**Prepared by:** Portfolio audit simulation  
-**Status:** Preliminary population checks completed; source completeness and selected reconciliations remain limited by the synthetic evidence package.
+**Document Status:** Preliminary population checks and sample testing documented; source completeness and evidence reliability remain limited  
+**Classification:** Synthetic portfolio simulation
 
 ## 1. Purpose
 
-This memo documents preliminary validation of the synthetic evidence populations before control testing. The objective is to assess basic integrity, uniqueness, cross-reference consistency, period coverage, and known limitations. This is not a conclusion on control design or operating effectiveness.
+This memo documents preliminary validation checks performed on the synthetic evidence populations used in the Northstar Services ITGC audit simulation.
 
-## 2. Population inventory
+The procedures address recorded counts, identifier uniqueness, selected cross-references, period coverage, and known data limitations. The memo also records how these limitations affect reliance on the sample results documented in the individual control workpapers.
 
-Counts below are source records excluding the header row.
+These checks do not establish that the populations are complete or accurate in the manner required for a real audit. This memo is not a conclusion on overall control design or operating effectiveness.
+
+## 2. Population Inventory
+
+Counts below represent source workbook records excluding the header row.
 
 | Workbook tab | Record count | Primary identifier / key | Preliminary status |
 |---|---:|---|---|
-| Provisioning | 15 | Request_ID | Usable for planned sample selection; approval and role exceptions are intentionally represented |
-| Terminations | 12 | Termination_ID | Usable for planned sample selection; one missing disablement timestamp and timing exceptions are represented |
-| Privileged Access | 10 | Assignment_ID | Usable for planned sample selection after approval cross-reference correction; PA-004 has no IT Security approval ID |
-| Access Reviews | 12 | Review_ID | Usable for review-timing and evidence-availability procedures; Q3 records are marked not provided and are not overdue as of September 30 |
-| Change Tickets | 12 | Change_ID | Usable for planned sample selection; approval, segregation-of-duties, and emergency-review evidence gaps are represented |
-| Access Listing | 15 | Listing_Record_ID | Partial listing supplied; completeness against a system-generated full population has not been independently established |
-| Privileged Approvals | 19 | Approval_Record_ID | IDs are unique and privileged-assignment references were checked after correction |
+| Provisioning | 15 | `Request_ID` | Preliminary sample testing documented; approval and role observations require follow-up. |
+| Terminations | 12 | `Termination_ID` | Preliminary sample testing documented; timing observations and one unresolved disablement status require follow-up. |
+| Privileged Access | 10 | `Assignment_ID` | Preliminary sample testing documented; PA-004 lacks a located IT Security Owner approval reference. |
+| Access Reviews | 12 | `Review_ID` | Preliminary sample testing documented; review evidence and timing require validation. Q3 reviews are not overdue as of September 30 solely because their deadline falls on October 15. |
+| Change Tickets | 12 | `Change_ID` | Preliminary sample testing documented; approval, independence, and emergency-review questions require follow-up. |
+| Access Listing | 15 | `Listing_Record_ID` | Supplied listing is partial; completeness against a full system-generated population has not been independently established. |
+| Privileged Approvals | 19 | `Approval_Record_ID` | Recorded identifiers and selected privileged-assignment references were checked; source accuracy has not been independently established. |
 
-## 3. Validation procedures performed
+The recorded populations and planned judgmental samples are:
 
-1. Inspected workbook sheet names, headers, and record counts.
-2. Checked that primary record identifiers are present and unique within each tab.
-3. Reviewed the privileged-assignment approval references against the Privileged Approvals tab.
-4. Added a dedicated `Agreed_Effective_Removal_Timestamp` field for termination TR-005 so its agreed removal time is explicit rather than embedded only in a note.
-5. Added a dedicated `Retrospective_Review_Timestamp` field for emergency changes; CH-006 remains blank because the timestamp is not located in the source package, and CH-010 contains the timestamp previously described in its source note.
-6. Revised misleading access-review source notes so that they describe recorded dates and evidence limitations rather than pre-judging whether the deadline was met.
-7. Preserved intentional control exceptions and evidence gaps; no exceptions were removed merely to make the workbook appear clean.
+| Control | Recorded population | Planned sample |
+|---|---:|---:|
+| AC-01 — User provisioning | 15 | 10 |
+| AC-02 — Terminations | 12 | 10 |
+| AC-03 — Privileged access | 10 | 10 |
+| AC-04 — Access reviews | 12 | 6 |
+| CM-01 — Change management | 12 | 10 |
+| **Total** | | **46** |
 
-## 4. Cross-reference results and data limitations
+The sample results are not statistically projectable to the full populations.
 
-### Privileged approvals
+## 3. Validation Procedures Performed
 
-The privileged approval record IDs were corrected so each populated approver reference in PA-001 through PA-010 maps to the matching user, application, and privileged role in the Privileged Approvals tab. PA-004 intentionally has no IT Security Owner approval reference; its Application Owner approval record is present. This is a control evidence exception to investigate during testing, not a population-integrity error to silently repair.
+The preliminary checks documented for the synthetic workbook include:
 
-### Provisioning and access listing
+1. Inspecting workbook tab names, headers, and recorded row counts.
+2. Checking that primary record identifiers are present and unique within the reviewed tabs.
+3. Reviewing selected privileged-assignment approval references against the Privileged Approvals tab.
+4. Reviewing the dedicated `Agreed_Effective_Removal_Timestamp` field for TR-005.
+5. Reviewing the dedicated `Retrospective_Review_Timestamp` field for emergency changes, including the missing timestamp for CH-006 and the recorded timestamp for CH-010.
+6. Reviewing access-review source notes to distinguish recorded dates and evidence limitations from conclusions about whether a deadline was met.
+7. Preserving intentional exceptions and evidence gaps rather than removing them to make the workbook appear complete.
+8. Recording the known limitations that prevent the workbook from establishing authoritative population completeness or source-data reliability.
 
-The Access Listing contains 15 rows and links to provisioning request IDs PR-001 through PR-015. The assigned role for PR-007 differs from the requested role recorded in Provisioning. PR-010 has no approval timestamp and is marked `NO_APPROVAL_RECORD`. These are intentional test conditions. The listing is a supplied sample population and has not been reconciled to a complete, independently generated application user export; therefore, completeness of the full access population remains unverified.
+These are checks of the supplied synthetic evidence package. They are not independent verification against production systems or authoritative source reports.
 
-### Terminations
+## 4. Cross-Reference Results and Data Limitations
 
-The Terminations tab contains 12 records. TR-006 has no disablement timestamp and an `UNKNOWN` account status. TR-005's agreed effective removal timestamp is now explicit in a dedicated field. Other timing records should be evaluated against the internal policy during testing; this memo does not determine control exceptions.
+### 4.1 Privileged Approvals
 
-### Access reviews
+The populated approval references in PA-001 through PA-010 were checked against the Privileged Approvals tab. PA-004 has an Application Owner approval reference, but no IT Security Owner approval reference was located.
 
-The tab contains four Q1, four Q2, and four Q3 application review records. Q3 ended September 30, 2026, and the policy deadline is 15 calendar days after quarter-end; therefore, the absence of Q3 completion records as of September 30 should not by itself be treated as overdue. The source package does not include full underlying review listings or sign-offs for every record. Completion dates, reviewer evidence, population counts, and follow-up items must be tested individually.
+This is a preliminary approval evidence gap requiring evaluation against the fictional policy. It should not be silently corrected or treated as proof that no approval could have occurred elsewhere.
 
-### Change management
+### 4.2 Provisioning and Access Listing
 
-The tab contains 12 change records. CH-004 has the same approver and implementer ID. CH-005 has no approval timestamp. CH-006 has no retrospective-review timestamp in the source package. CH-010 records a retrospective-review timestamp of July 6, 2026 at 10:00. These are test conditions requiring evaluation against the policy and relevant timing criteria.
+The Access Listing contains 15 rows and links to provisioning request IDs PR-001 through PR-015.
 
-## 5. Readiness for testing
+- PR-007 has a requested role of `Lead`, while the Access Listing shows `Operations Admin`.
+- PR-010 lacks an approval timestamp and is marked `NO_APPROVAL_RECORD`.
 
-| Control / population | Readiness | Required caution |
+These conditions are documented in WP-001 and the findings tracker.
+
+The supplied Access Listing has not been reconciled to a complete, independently generated application-user export. The 15 recorded rows therefore do not establish that the entire application access population is represented.
+
+### 4.3 Terminations
+
+The Terminations tab contains 12 records.
+
+- TR-006 lacks a disablement timestamp and has an `UNKNOWN` account status.
+- TR-005 has a dedicated agreed effective-removal timestamp.
+- TR-003 and TR-008 have recorded notification-to-disablement intervals exceeding four hours.
+
+These conditions are documented in WP-002. The recorded timestamps and account statuses require validation against reliable supporting evidence before final conclusions are issued.
+
+### 4.4 Access Reviews
+
+The Access Reviews tab contains four Q1, four Q2, and four Q3 records.
+
+The fictional policy deadline is 15 calendar days after quarter-end. Q3 ended September 30, 2026, and the deadline falls on October 15, 2026. Therefore, Q3 reviews must not be classified as overdue at the September 30 audit cutoff solely because their deadline falls after that date.
+
+The source package does not include full underlying review listings or reviewer sign-offs for every record. The WP-004 sample contains AR-001, AR-003, AR-004, AR-005, AR-006, and AR-008. AR-003, AR-004, AR-006, and AR-008 are recorded as late. Completion evidence for REM-002 has not been located in the current evidence package.
+
+AR-007 remains a separate population observation because it is outside the WP-004 sample.
+
+### 4.5 Change Management
+
+The Change Tickets tab contains 12 records.
+
+- CH-004 has the same approver and implementer ID.
+- CH-005 lacks an approval timestamp.
+- CH-006 lacks a retrospective-review timestamp in the current evidence package.
+- CH-010 records implementation on July 3, 2026 at 1:20 AM and retrospective review on July 6, 2026 at 10:00 AM.
+
+CH-006 and CH-010 require separate assessments. CH-006 is an evidence gap because the package does not establish whether or when retrospective review occurred. CH-010 requires a documented interpretation of “within one business day,” including the applicable timezone, business calendar, and treatment of weekends and holidays.
+
+## 5. Preliminary Testing Status
+
+| Control / population | Current status | Required caution |
 |---|---|---|
-| AC-01 Provisioning | Proceed with sample testing | Treat missing approval evidence and role mismatch as test conditions; validate access listing completeness limitation |
-| AC-02 Terminations | Proceed with sample testing | Missing timestamp means the timing result may be unable to conclude unless alternative evidence is obtained |
-| AC-03 Privileged access | Proceed with sample testing | Confirm both required approval roles and timing; PA-004 lacks an IT Security approval reference |
-| AC-04 Access reviews | Proceed with scoped testing | Do not classify Q3 reviews as overdue at September 30; obtain underlying review evidence where available |
-| CM-01 Change management | Proceed with sample testing | Evaluate approval timing, approver/implementer separation, testing evidence, and emergency retrospective review |
+| AC-01 — Provisioning | Preliminary sample results documented | PR-007's role mismatch and PR-010's missing approval evidence require follow-up; Access Listing completeness remains unverified. |
+| AC-02 — Terminations | Preliminary sample results documented | Validate timestamps and TR-006's actual account status; missing evidence may prevent a conclusion. |
+| AC-03 — Privileged access | Preliminary sample results documented | Determine whether both required approval roles are supported by reliable evidence. |
+| AC-04 — Access reviews | Preliminary sample results documented | Validate review artifacts and follow-up evidence; keep AR-007 separate from the six-item sample. |
+| CM-01 — Change management | Preliminary sample results documented | Validate approval and testing evidence, independence, and the emergency-review timing interpretation. |
 
-## 6. Conclusion and limitations
+The individual workpapers document the selected sample items and preliminary results. Those results remain subject to evidence validation and final evaluation.
 
-The workbook is sufficiently structured to begin the planned sample-based procedures, subject to the limitations above. This is not evidence that the populations are complete or accurate in the way a real audit would require. In a live engagement, the auditor would obtain system-generated reports, document report parameters and extraction dates, reconcile totals to authoritative sources, test report logic and completeness, and retain evidence of the extraction and reconciliation. The workbook is synthetic portfolio data and does not support a real assurance opinion.
+## 6. Conclusion and Limitations
 
-## 7. Next steps
+The synthetic workbook has been reviewed for recorded counts, identifier uniqueness, selected cross-references, and known evidence gaps. Preliminary sample testing is documented in WP-001 through WP-005.
 
-1. Record the source population counts and sample-selection rationale in the relevant workpapers.
-2. Perform the planned tests in `docs/audit-test-program.md` and retain a clear link between each sample, evidence inspected, result, and conclusion.
-3. Classify results as Pass, Exception, Unable to Conclude, or Not Applicable; do not treat missing evidence as proof that an activity never occurred without considering alternative evidence.
-4. Draft findings only after testing, with criteria, condition, risk/effect, cause where supported, and a practical recommendation.
+These procedures do not establish that the populations are complete or accurate as a real audit would require. The Access Listing has not been reconciled to a complete, independently generated user export. Recorded timestamps and approval references have not been independently verified against production systems.
+
+For a live engagement, the auditor would obtain authoritative system-generated reports, document extraction parameters and dates, reconcile totals to authoritative sources where possible, test report logic and completeness, and retain evidence of the extraction and reconciliation.
+
+Missing documentation does not automatically prove that an activity did not occur. Where reliable evidence is insufficient, the appropriate result remains *unable to conclude* until additional procedures or evidence support a conclusion.
+
+This synthetic portfolio package does not support a real assurance opinion or a final overall control-effectiveness conclusion.
+
+## 7. Next Steps
+
+1. Reconcile the individual workpapers with the findings tracker, Excel control-testing summary, remediation validation plan, and preliminary report.
+2. Resolve or explicitly retain outstanding evidence gaps for TR-006, PA-004, REM-002, CH-005, and CH-006.
+3. Document the applicable policy interpretation and timing assumptions needed to evaluate CH-010.
+4. Preserve AR-007 as a separate population observation unless it is selected for additional testing and documented accordingly.
+5. Reassess preliminary classifications if additional evidence or clarified criteria support a change.
+6. Update the report only when conclusions are supported by the documented procedures and evidence.
+7. Retain the limitations on population completeness, source-data reliability, and judgmental sampling in the final documentation.
+
+**Current status:** Preliminary population checks and sample testing documented; evidence validation, open-item resolution, and final conclusions pending.
+
+*All records, organizations, and results are fictional and are included solely for educational and portfolio demonstration purposes.*
